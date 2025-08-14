@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Insights — Axia</title>
+
+  <!-- Tailwind (CDN) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Theme tokens -->
+  <style>
+    :root{
+      --navy:#051c33;    /* Axia navy (matches logo) */
+      --ink:#18181b;     /* body text */
+      --muted:#5b6275;   /* secondary text */
+      --border:#e5e7eb;  /* subtle borders */
+      --brand:#1f4fbf;   /* link accent (can change later) */
+    }
+    html,body{ color:var(--ink); background:#fff; }
+    .container{ max-width:1120px; margin-inline:auto; padding-inline:1rem; }
+  </style>
+</head>
+
+<!-- Give the page a top anchor so #top works -->
+<body id="top" class="font-sans">
+
+  <!-- Header (same as the homepage/about) -->
+  <header class="sticky top-0 z-40 bg-[var(--navy)]">
+    <div class="container py-4 flex items-center gap-6">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+        <span class="sr-only">AXIA</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
+        <!-- Update nav to your current labels -->
+        <a class="hover:underline" href="insights.html">Insights</a>
+        <a class="hover:underline" href="foundations.html">Foundations</a>
+        <a class="hover:underline" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+
+      <div class="ml-auto hidden md:block">
+        <input placeholder="Search sections…" class="w-64 border rounded px-3 py-2 text-sm" />
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-8 md:py-10">
+
+    <!-- Page intro -->
+    <header class="mb-6">
+      <h1 class="font-serif text-3xl md:text-4xl">Insights</h1>
+      <p class="text-[var(--muted)] mt-2 max-w-3xl">
+        Real-world analysis at the intersection of data and values.
+      </p>
+    </header>
+
+    <!-- =========================
+         Current & Breaking
+         ========================= -->
+    <section id="current-breaking" class="scroll-mt-24">
+      <div class="flex items-baseline justify-between">
+        <h2 class="font-serif text-2xl md:text-3xl">Current &amp; Breaking</h2>
+        <a class="text-sm text-[var(--brand)] hover:underline" href="#top">Back to top</a>
+      </div>
+      <p class="text-[var(--muted)] mt-1 mb-5">
+        Short, timely takes on major policy and economic events.
+      </p>
+
+      <!-- Article cards grid -->
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <!-- CARD -->
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
+          <a href="articles/example-article.html">
+            <img src="images/card1.jpg" alt="" class="w-full h-40 object-cover">
+          </a>
+          <div class="p-4">
+            <a class="font-semibold leading-snug hover:underline"
+               href="articles/example-article.html">
+              Jobs report: what the headline number hides
+            </a>
+            <p class="text-sm text-[var(--muted)] mt-2">
+              A quick explainer on participation, revisions, and wage trends.
+            </p>
+            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+          </div>
+        </article>
+
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
+          <a href="articles/example-article.html">
+            <img src="images/card2.jpg" alt="" class="w-full h-40 object-cover">
+          </a>
+          <div class="p-4">
+            <a class="font-semibold leading-snug hover:underline"
+               href="articles/example-article.html">
+              CPI surprise: how core vs. headline diverged
+            </a>
+            <p class="text-sm text-[var(--muted)] mt-2">
+              Breaking down shelter lags, goods disinflation, and services.
+            </p>
+            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+          </div>
+        </article>
+
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
+          <a href="articles/example-article.html">
+            <img src="images/featured.jpg" alt="" class="w-full h-40 object-cover">
+          </a>
+          <div class="p-4">
+            <a class="font-semibold leading-snug hover:underline"
+               href="articles/example-article.html">
+              Immigration rule change: what shifts first
+            </a>
+            <p class="text-sm text-[var(--muted)] mt-2">
+              Timing, backlogs, and near-term labor-market effects.
+            </p>
+            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- spacer -->
+    <div class="h-12"></div>
+
+    <!-- =========================
+         Deep Analysis
+         ========================= -->
+    <section id="deep-analysis" class="scroll-mt-24">
+      <div class="flex items-baseline justify-between">
+        <h2 class="font-serif text-2xl md:text-3xl">Deep Analysis</h2>
+        <a class="text-sm text-[var(--brand)] hover:underline" href="#top">Back to top</a>
+      </div>
+      <p class="text-[var(--muted)] mt-1 mb-5">
+        Long-form breakdowns of key proposals, studies, or trends.
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
+          <a href="articles/example-article.html">
+            <img src="images/card3.jpg" alt="" class="w-full h-40 object-cover">
+          </a>
+          <div class="p-4">
+            <a class="font-semibold leading-snug hover:underline"
+               href="articles/example-article.html">
+              The case for/against land-use reform: evidence review
+            </a>
+            <p class="text-sm text-[var(--muted)] mt-2">
+              What the literature says on prices, growth, equity, and emissions.
+            </p>
+            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+          </div>
+        </article>
+
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
+          <a href="articles/example-article.html">
+            <img src="images/card4.jpg" alt="" class="w-full h-40 object-cover">
+          </a>
+          <div class="p-4">
+            <a class="font-semibold leading-snug hover:underline"
+               href="articles/example-article.html">
+              Child benefits & labor supply: design trade-offs
+            </a>
+            <p class="text-sm text-[var(--muted)] mt-2">
+              Take-up, phase-outs, work incentives, and distributional impacts.
+            </p>
+            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+          </div>
+        </article>
+
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
+          <a href="articles/example-article.html">
+            <img src="images/card5.jpg" alt="" class="w-full h-40 object-cover">
+          </a>
+          <div class="p-4">
+            <a class="font-semibold leading-snug hover:underline"
+               href="articles/example-article.html">
+              Industrial policy: goals, tools, and guardrails
+            </a>
+            <p class="text-sm text-[var(--muted)] mt-2">
+              When to subsidize, how to target, and what to measure.
+            </p>
+            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- spacer -->
+    <div class="h-12"></div>
+
+    <!-- =========================
+         Truth & Myths
+         ========================= -->
+    <section id="truth-myths" class="scroll-mt-24">
+      <div class="flex items-baseline justify-between">
+        <h2 class="font-serif text-2xl md:text-3xl">Truth &amp; Myths</h2>
+        <a class="text-sm text-[var(--brand)] hover:underline" href="#top">Back to top</a>
+      </div>
+      <p class="text-[var(--muted)] mt-1 mb-5">
+        Fact checks plus examination of the values and assumptions behind claims.
+      </p>
+
+      <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
+          <a href="articles/example-article.html">
+            <img src="images/card6.jpg" alt="" class="w-full h-40 object-cover">
+          </a>
+          <div class="p-4">
+            <a class="font-semibold leading-snug hover:underline"
+               href="articles/example-article.html">
+              “Deficits always cause inflation” — myth vs. context
+            </a>
+            <p class="text-sm text-[var(--muted)] mt-2">
+              What matters: slack, supply shocks, policy mix, and expectations.
+            </p>
+            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+          </div>
+        </article>
+
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
+          <a href="articles/example-article.html">
+            <img src="images/card7.jpg" alt="" class="w-full h-40 object-cover">
+          </a>
+          <div class="p-4">
+            <a class="font-semibold leading-snug hover:underline"
+               href="articles/example-article.html">
+              “Immigration depresses wages” — what the evidence shows
+            </a>
+            <p class="text-sm text-[var(--muted)] mt-2">
+              Short-run vs. long-run effects and who’s affected.
+            </p>
+            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+          </div>
+        </article>
+
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
+          <a href="articles/example-article.html">
+            <img src="images/card8.jpg" alt="" class="w-full h-40 object-cover">
+          </a>
+          <div class="p-4">
+            <a class="font-semibold leading-snug hover:underline"
+               href="articles/example-article.html">
+              “Zoning doesn’t affect prices” — testing the claim
+            </a>
+            <p class="text-sm text-[var(--muted)] mt-2">
+              Identification strategies and robustness checks in housing research.
+            </p>
+            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Simple footer -->
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="container py-8 grid gap-6 md:grid-cols-2 text-sm">
+      <div>
+        <div class="text-xl font-serif">AXIA</div>
+        <p class="text-[var(--muted)] mt-2">Independent policy analysis and research.</p>
+      </div>
+      <nav class="flex gap-4">
+        <a class="hover:underline" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="foundations.html">Foundations</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="border-t border-[var(--border)] text-xs text-center py-4 text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+
+  <script>
+    // footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

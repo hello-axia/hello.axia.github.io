@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ==== HOW TO EDIT THIS PAGE ====
+  1) Change site colors/fonts in the <style> block if you want.
+  2) To feature a new article on the homepage:
+     - Create the article file in /articles (copy the template),
+     - Then duplicate one of the “CARD” blocks below and update its title/link.
+  ==================================== -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Axia — Policy & Research</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { 500:"#1f4fbf", 600:"#153f9c" }
+          },
+          fontFamily: {
+            serif: ["Georgia","serif"],
+            sans: ["Inter","system-ui","sans-serif"]
+          },
+          maxWidth: { content: "1120px" }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --page-bg:#ffffff;
+      --ink:#18181b;
+      --muted:#5b6275;
+      --border:#e5e7eb;
+      --navy:#051c33; /* Axia navy – used by the About page header */
+    }
+    html,body{ background:var(--page-bg); color:var(--ink); }
+    .container{max-width:1120px;margin-inline:auto;padding-inline:1rem}
+  </style>
+</head>
+<body class="font-sans">
+
+<!-- Header (Insights + Foundations) -->
+<!-- Header (shared on all pages) -->
+<header class="sticky top-0 z-40 bg-[#051c33]">
+    <div class="container py-4 flex items-center gap-6">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+        <span class="sr-only">AXIA</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
+        <a class="hover:underline" href="insights.html">Insights</a>
+        <a class="hover:underline" href="foundations.html">Foundations</a>
+        <a class="hover:underline" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+      <div class="ml-auto hidden md:block">
+        <input id="search" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-6 md:py-8">
+    <!-- Lead area -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- FEATURED story -->
+      <article class="lg:col-span-2 border border-[var(--border)] rounded overflow-hidden">
+        <!-- EDIT HERE: Featured image + link -->
+        <a href="articles/example-article.html">
+          <img src="images/featured.jpg" alt="" class="w-full h-64 md:h-96 object-cover">
+        </a>
+        <div class="p-5">
+          <a href="topics.html#immigration" class="text-xs uppercase tracking-wide text-brand-600">Migration & Immigration</a>
+          <!-- EDIT HERE: Featured headline + link -->
+          <h1 class="font-serif text-2xl md:text-4xl mt-2 leading-tight">
+            <a class="hover:underline" href="articles/example-article.html">
+              Example Featured Article Headline
+            </a>
+          </h1>
+          <p class="text-[var(--muted)] mt-3 max-w-2xl">
+            <!-- EDIT HERE: Short description -->
+            A short dek explaining the key point of the featured article.
+          </p>
+          <div class="text-sm text-[var(--muted)] mt-3">By <span class="text-black">Author Name</span> · Aug 13, 2025</div>
+        </div>
+      </article>
+
+      <!-- Right column list (cards). DUPLICATE a CARD to add more. -->
+      <aside class="space-y-4" id="right-rail">
+        <!-- CARD -->
+        <article class="flex gap-3 border-b border-[var(--border)] pb-4 items-start"
+                 data-title="tax payroll scholarship program" data-tags="taxation,education">
+          <img src="images/card1.jpg" class="w-28 h-20 object-cover rounded" alt="">
+          <div>
+            <a href="articles/example-article.html" class="font-semibold leading-snug hover:underline">
+              Example small card linking to an article
+            </a>
+            <div class="text-xs text-[var(--muted)] mt-1">By Someone · Aug 5, 2025</div>
+          </div>
+        </article>
+
+        <!-- CARD -->
+        <article class="flex gap-3 border-b border-[var(--border)] pb-4 items-start"
+                 data-title="taiwan china united states recall vote" data-tags="asia,security">
+          <img src="images/card2.jpg" class="w-28 h-20 object-cover rounded" alt="">
+          <div>
+            <a href="articles/example-article.html" class="font-semibold leading-snug hover:underline">
+              Another small card (duplicate this block to add more)
+            </a>
+            <div class="text-xs text-[var(--muted)] mt-1">By Person · Aug 1, 2025</div>
+          </div>
+        </article>
+      </aside>
+    </section>
+
+ <!-- Topics: split into Fundamentals + Applied -->
+ <section class="mt-10 md:mt-14 space-y-10">
+ <!-- INSIGHTS -->
+<div>
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-xl md:text-2xl font-serif">Insights</h2>
+      <!-- goes to the top of insights page -->
+      <a class="text-sm text-brand-600 hover:underline" href="insights.html#top">Browse all</a>
+    </div>
+  
+    <p class="text-sm text-[var(--muted)] mb-4">
+      Real-world analysis at the intersection of data and values.
+    </p>
+  
+    <div class="grid gap-6 md:grid-cols-3">
+      <!-- Current & Breaking -->
+      <a href="insights.html#current-breaking"
+         class="group border border-[var(--border)] rounded p-5 hover:shadow-sm transition">
+        <div class="text-xs uppercase tracking-wide text-brand-600">Current & Breaking</div>
+        <h3 class="font-semibold mt-1 group-hover:underline">
+          Short, timely takes on major policy and economic events.
+        </h3>
+      </a>
+  
+      <!-- Deep Analysis -->
+      <a href="insights.html#deep-analysis"
+         class="group border border-[var(--border)] rounded p-5 hover:shadow-sm transition">
+        <div class="text-xs uppercase tracking-wide text-brand-600">Deep Analysis</div>
+        <h3 class="font-semibold mt-1 group-hover:underline">
+          Long-form breakdowns of key proposals, studies, or trends.
+        </h3>
+      </a>
+  
+      <!-- Truth & Myths -->
+      <a href="insights.html#truth-myths"
+         class="group border border-[var(--border)] rounded p-5 hover:shadow-sm transition">
+        <div class="text-xs uppercase tracking-wide text-brand-600">Truth & Myths</div>
+        <h3 class="font-semibold mt-1 group-hover:underline">
+          Fact checks plus examination of the values and assumptions behind claims.
+        </h3>
+      </a>
+    </div>
+  </div>
+  
+   <!-- FOUNDATIONS -->
+<div>
+    <div class="flex items-center justify-between mb-3">
+      <h2 class="text-xl md:text-2xl font-serif">Foundations</h2>
+      <!-- goes to the top of foundations page -->
+      <a class="text-sm text-brand-600 hover:underline" href="foundations.html#top">Browse all</a>
+    </div>
+  
+    <p class="text-sm text-[var(--muted)] mb-4">
+      Core ideas and tools that explain the “why” behind our insights.
+    </p>
+  
+    <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+      <!-- Economic Fundamentals -->
+      <a href="foundations.html#econ"
+         class="group border border-[var(--border)] rounded p-5 hover:shadow-sm transition">
+        <div class="text-xs uppercase tracking-wide text-brand-600">Economic Fundamentals</div>
+        <h3 class="font-semibold mt-1 group-hover:underline">
+          Supply & demand, market failures, elasticity, opportunity cost.
+        </h3>
+      </a>
+  
+      <!-- Public Finance & Policy -->
+      <a href="foundations.html#public"
+         class="group border border-[var(--border)] rounded p-5 hover:shadow-sm transition">
+        <div class="text-xs uppercase tracking-wide text-brand-600">Public Finance & Policy</div>
+        <h3 class="font-semibold mt-1 group-hover:underline">
+          Taxation, redistribution, social insurance, fiscal tools.
+        </h3>
+      </a>
+  
+      <!-- Governance & Systems -->
+      <a href="foundations.html#governance"
+         class="group border border-[var(--border)] rounded p-5 hover:shadow-sm transition">
+        <div class="text-xs uppercase tracking-wide text-brand-600">Governance & Systems</div>
+        <h3 class="font-semibold mt-1 group-hover:underline">
+          How laws are made, voting systems, and the mechanics of government.
+        </h3>
+      </a>
+  
+      <!-- Ethics & Principles -->
+      <a href="foundations.html#ethics"
+         class="group border border-[var(--border)] rounded p-5 hover:shadow-sm transition">
+        <div class="text-xs uppercase tracking-wide text-brand-600">Ethics & Principles</div>
+        <h3 class="font-semibold mt-1 group-hover:underline">
+          The values, trade-offs, and moral reasoning that shape policy decisions.
+        </h3>
+      </a>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="container py-8 grid gap-6 md:grid-cols-2 text-sm">
+      <div>
+        <div class="text-xl font-serif">AXIA</div>
+        <p class="text-[var(--muted)] mt-2">Independent policy analysis and research.</p>
+      </div>
+      <nav class="flex gap-4">
+        <a class="hover:underline" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="topics.html">Topics</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="border-t border-[var(--border)] text-xs text-center py-4 text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Simple search (filters right-hand cards by data-title/data-tags)
+    const search = document.getElementById('search');
+    const items = [...document.querySelectorAll('#right-rail article')];
+    search.addEventListener('input', e => {
+      const q = e.target.value.trim().toLowerCase();
+      items.forEach(el => {
+        const hay = (el.dataset.title + ' ' + (el.dataset.tags||'')).toLowerCase();
+        el.style.display = hay.includes(q) ? '' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

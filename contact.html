@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact — Axia</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Theme tokens shared across pages -->
+  <style>
+    :root{
+      --navy:#051c33;          /* exact Axia navy */
+      --page-bg:#ffffff;
+      --ink:#18181b;
+      --muted:#5b6275;
+      --border:#e5e7eb;
+    }
+    html,body{ background:var(--page-bg); color:var(--ink); }
+    .container{max-width:1120px;margin-inline:auto;padding-inline:1rem}
+  </style>
+</head>
+<body class="font-sans">
+
+<!-- Header (shared on all pages) -->
+<header class="sticky top-0 z-40 bg-[#051c33]">
+    <div class="container py-4 flex items-center gap-6">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+        <span class="sr-only">AXIA</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
+        <a class="hover:underline" href="insights.html">Insights</a>
+        <a class="hover:underline" href="foundations.html">Foundations</a>
+        <a class="hover:underline" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+      <div class="ml-auto hidden md:block">
+        <input id="search" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
+      </div>
+    </div>
+  </header>
+
+  <main class="container py-10 md:py-14">
+    <div class="max-w-2xl">
+      <h1 class="font-serif text-3xl md:text-4xl">Contact Axia</h1>
+      <p class="mt-4 text-[var(--muted)] leading-relaxed">
+        Have a question, comment, or concern? Found an error in something we’ve published? Or just want to share your thoughts?
+        We’d love to hear from you—seriously. Whether it’s feedback on our content, ideas for topics you’d like us to cover,
+        or constructive criticism to help us get better, your voice matters.
+      </p>
+
+
+      <p class="mt-4 text-[var(--muted)] text-sm">
+        All feedback—big or small—is greatly appreciated. Every message helps us make Axia stronger, clearer, and more valuable to our community.
+      </p>
+
+      <!-- Contact form -->
+      <form class="mt-8 space-y-4" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <div>
+          <label class="block text-sm font-medium mb-1">Your email</label>
+          <input name="email" type="email" required
+                 class="w-full border border-[var(--border)] rounded px-3 py-2" placeholder="you@example.com" />
+        </div>
+        <div>
+          <label class="block text-sm font-medium mb-1">Message</label>
+          <textarea name="message" required rows="6"
+                    class="w-full border border-[var(--border)] rounded px-3 py-2"
+                    placeholder="How can we help?"></textarea>
+        </div>
+        <button class="inline-flex items-center rounded bg-[var(--navy)] text-white px-4 py-2 hover:opacity-90" type="submit">
+          Send
+        </button>
+        <!-- Optional: simple success/fail redirect -->
+        <!-- <input type="hidden" name="_subject" value="New Axia contact form submission" />
+        <input type="hidden" name="_next" value="https://your-site.com/thanks.html" /> -->
+      </form>
+    </div>
+  </main>
+
+  <!-- Footer (same style as other pages) -->
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="container py-8 grid gap-6 md:grid-cols-2 text-sm">
+      <div>
+        <div class="text-xl font-serif">AXIA</div>
+        <p class="text-[var(--muted)] mt-2">Independent policy analysis and research.</p>
+      </div>
+      <nav class="flex gap-4">
+        <a class="hover:underline" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="topics.html">Topics</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="border-t border-[var(--border)] text-xs text-center py-4 text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+
+  <script>
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Search (safe to include on pages without right-rail)
+    const search = document.getElementById('search');
+    const items = [...document.querySelectorAll('#right-rail article')];
+    if (search && items.length) {
+      search.addEventListener('input', e => {
+        const q = e.target.value.trim().toLowerCase();
+        items.forEach(el => {
+          const hay = (el.dataset.title + ' ' + (el.dataset.tags || '')).toLowerCase();
+          el.style.display = hay.includes(q) ? '' : 'none';
+        });
+      });
+    }
+  </script>
+</body>
+</html>

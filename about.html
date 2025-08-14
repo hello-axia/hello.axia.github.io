@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>About — Axia</title>
+
+  <!-- Tailwind (CDN) and font -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Georgia&display=swap" rel="stylesheet">
+
+  <!-- Quick theme tokens to match the rest of the site -->
+  <style>
+    :root{
+      --navy:#051c33;         /* Axia navy */
+      --ink:#18181b;          /* body text */
+      --muted:#5b6275;        /* secondary text */
+      --border:#e5e7eb;       /* subtle borders */
+      --gold:#C7A15A;         /* optional accent from logo */
+    }
+    html,body{color:var(--ink);}
+    .container{max-width:1120px;margin-inline:auto;padding-inline:1rem}
+  </style>
+</head>
+<body class="font-[Inter]">
+
+ <!-- Header (Insights + Foundations) -->
+<!-- Header (shared on all pages) -->
+<header class="sticky top-0 z-40 bg-[#051c33]">
+    <div class="container py-4 flex items-center gap-6">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+        <span class="sr-only">AXIA</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
+        <a class="hover:underline" href="insights.html">Insights</a>
+        <a class="hover:underline" href="foundations.html">Foundations</a>
+        <a class="hover:underline" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+      <div class="ml-auto hidden md:block">
+        <input id="search" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="bg-[var(--navy)] text-white">
+    <div class="container py-12 md:py-16">
+      <div class="max-w-3xl">
+        <p class="uppercase tracking-widest text-xs text-[#b9c5e6]">About Axia</p>
+        <h1 class="font-serif text-3xl md:text-5xl mt-2">Know the Value.</h1>
+        <p class="mt-4 text-lg text-[#dbe3ff]">
+          At Axia, we believe understanding policy shouldn’t require a PhD or a lifetime engulfed in politics.
+          We bridge the gap between complex policy and everyday decision-making—so you can act with clarity.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <main class="container py-10 md:py-14">
+
+    <!-- Why We Exist -->
+    <section class="grid gap-8 md:grid-cols-3 items-start">
+      <div class="md:col-span-2">
+        <h2 class="font-serif text-2xl md:text-3xl">Why We Exist</h2>
+        <div class="prose max-w-none mt-4 leading-relaxed text-[var(--ink)]">
+          <p>
+            Millennials, Gen Z, and emerging Gen Alpha are on the brink of becoming the most influential voting
+            bloc in U.S. history. By 2028, these generations will make up over half of eligible voters. In 2024 alone,
+            more than 8 million Gen Zers aged into the electorate.
+          </p>
+          <p>
+            Yet the information shaping our views is highly polarized—often optimized for engagement, not understanding.
+            That polarization protects the status quo. While we argue past each other, the wealthiest and most
+            powerful continue to consolidate influence. This is no longer about left versus right; it’s about whether a
+            small elite will decide our future.
+          </p>
+          <p>
+            That’s where Axia comes in. We cut through the noise and surface the real value behind big decisions, so you
+            can make sense of policy—not just scroll past it. When you know the value, you can vote with clarity,
+            confidence, and purpose.
+          </p>
+        </div>
+      </div>
+
+      <!-- Small data/values panel (inspired by Economist/Brookings side facts) -->
+      <aside class="border border-[var(--border)] rounded p-5 bg-white">
+        <h3 class="font-semibold">By the numbers</h3>
+        <ul class="mt-3 space-y-3 text-sm text-[var(--muted)]">
+          <li><span class="font-semibold text-[var(--ink)]">50%+</span> of eligible voters by 2028 will be Millennials, Gen Z, and Gen Alpha.</li>
+          <li><span class="font-semibold text-[var(--ink)]">8M+</span> Gen Z joined the electorate in 2024 alone.</li>
+          <li>Our goal: translate policy into clear choices grounded in value, not partisanship.</li>
+        </ul>
+      </aside>
+    </section>
+
+    <!-- What We Do -->
+    <section id="what-we-do" style="margin-top: 2rem;">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">What We Do</h2>
+        <p style="max-width: 700px; margin-bottom: 2rem; line-height: 1.6;">
+          We translate economics, public finance, and civic issues into clear, actionable insights—without the jargon and without the spin.
+        </p>
+      
+        <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+          <div style="flex: 1; min-width: 280px; background: #f9f9f9; padding: 1.5rem; border-radius: 6px;">
+            <h4 style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: #555;">Foundations</h4>
+            <h3 style="margin-top: 0.5rem;">Short, engaging explainers</h3>
+            <p style="line-height: 1.5; color: #444;">
+              We break down the core economic and civic concepts that shape the headlines—so you understand the mechanics behind taxes, budgets, inflation, migration, labor markets, and more.
+            </p>
+          </div>
+      
+          <div style="flex: 1; min-width: 280px; background: #f9f9f9; padding: 1.5rem; border-radius: 6px;">
+            <h4 style="text-transform: uppercase; font-size: 0.85rem; letter-spacing: 1px; color: #555;">Analysis</h4>
+            <h3 style="margin-top: 0.5rem;">Fact-anchored, perspective-aware</h3>
+            <p style="line-height: 1.5; color: #444;">
+              We synthesize research and proposals with clear framing. We acknowledge that ideologies shape how people interpret the same facts—so we bring those differences into the light and give you the tools to decide where you stand and what to do next.
+            </p>
+          </div>
+        </div>
+      </section>
+      
+      <section id="mission" style="margin-top: 3rem; background: #f9f9f9; padding: 2rem; border-radius: 6px;">
+        <h2 style="font-size: 2rem; margin-bottom: 1rem;">Our Mission</h2>
+        <p style="max-width: 700px; line-height: 1.6; color: #444;">
+          To help you cut through the noise and see the real value behind big decisions—so you can make sense of policy, not just scroll past it.
+        </p>
+      </section>
+
+
+    <!-- Why Axia -->
+    <section class="mt-12 grid gap-6 md:grid-cols-[1.2fr,1fr] items-start">
+      <div>
+        <h2 class="font-serif text-2xl md:text-3xl">Why “Axia”?</h2>
+        <p class="mt-3 text-[var(--muted)] max-w-3xl">
+          Our name comes from the Greek word <em>ἀξία (axía)</em>, meaning value, worth, or merit. It reflects our belief
+          that every voter has the right to understand the value of the policies and decisions that shape our lives.
+        </p>
+      </div>
+      <div class="border border-[var(--border)] rounded p-5 bg-white">
+        <h3 class="font-semibold">How to use Axia</h3>
+        <ol class="list-decimal list-inside text-sm mt-2 space-y-1 text-[var(--muted)]">
+          <li>Start with <a class="text-[var(--navy)] underline" href="topics.html">Topics</a> to browse areas you care about.</li>
+          <li>Read <a class="text-[var(--navy)] underline" href="articles.html">Articles</a> for current analysis and memos.</li>
+          <li>Share insights and vote with clarity and purpose.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="mt-12 border-t border-[var(--border)] pt-8">
+      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+        <div>
+          <h3 class="font-semibold text-lg">Have feedback or want to collaborate?</h3>
+          <p class="text-[var(--muted)]">We’d love to hear from you.</p>
+        </div>
+        <a href="contact.html"
+           class="inline-flex items-center rounded bg-[var(--navy)] text-white px-4 py-2 hover:opacity-90">
+          Contact Axia
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer (simple, matching your current layout) -->
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="container py-8 grid gap-6 md:grid-cols-2 text-sm">
+      <div>
+        <div class="text-xl font-serif">AXIA</div>
+        <p class="text-[var(--muted)] mt-2">Independent policy analysis and research.</p>
+      </div>
+      <nav class="flex gap-4">
+        <a class="hover:underline" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="topics.html">Topics</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="border-t border-[var(--border)] text-xs text-center py-4 text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

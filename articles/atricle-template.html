@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <!-- ==== READ ME ====
+  COPY THIS FILE to create a new article:
+  1) Save as: articles/your-article-slug.html
+  2) Change the EDIT HERE spots (title, author, date, image, content).
+  3) Add a link to this file on index.html and articles.html
+  ===================== -->
+
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title><!-- EDIT HERE: Short Title --> Example Article — Axia</title>
+
+  <!-- Tailwind (no install needed) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{ --page-bg:#ffffff; --ink:#18181b; --muted:#5b6275; --border:#e5e7eb; }
+    html,body{ background:var(--page-bg); color:var(--ink); }
+    .container{ max-width: 760px; margin-inline:auto; padding-inline:1rem; }
+    .prose p{ margin: 1rem 0; line-height: 1.75; }
+    .prose h2{ font-family: Georgia, serif; font-size:1.5rem; margin-top:2rem; }
+    .caption{ color:var(--muted); font-size:.875rem; margin-top:.25rem; }
+    img{ width:100%; height:auto; }
+  </style>
+</head>
+<body class="font-sans">
+  <!-- Header -->
+  <header class="border-b border-[var(--border)]">
+    <div class="max-w-[1120px] mx-auto px-4 py-4 flex items-center gap-6">
+      <a href="../index.html" class="text-2xl font-serif">AXIA</a>
+      <nav class="text-sm ml-auto">
+        <a class="hover:underline mr-4" href="../articles.html">All Articles</a>
+        <a class="hover:underline mr-4" href="../topics.html">Topics</a>
+        <a class="hover:underline" href="../about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Article -->
+  <main class="container py-8">
+    <div class="text-xs uppercase tracking-wide text-blue-900"><!-- EDIT HERE: Topic --> Taxation</div>
+    <h1 class="font-serif text-3xl md:text-5xl leading-tight mt-2">
+      <!-- EDIT HERE: Headline --> Example Article Headline
+    </h1>
+    <div class="text-sm text-[var(--muted)] mt-2">
+      <!-- EDIT HERE: Author, Date, Reading Time -->
+      By Jane Doe · August 13, 2025 · 7 min read
+    </div>
+
+    <!-- EDIT HERE: Hero image (or delete figure entirely) -->
+    <figure class="mt-6">
+      <img src="../images/hero-example.jpg" alt="(optional)">
+      <figcaption class="caption">Optional image caption.</figcaption>
+    </figure>
+
+    <!-- EDIT HERE: Main content -->
+    <article class="prose">
+      <p>
+        Start your article here. Keep sentences short and clear. You can paste plain text, add <strong>bold</strong> or <em>italics</em>, and use subheadings.
+      </p>
+
+      <h2>Subheading</h2>
+      <p>
+        Add paragraphs, bullet points, or charts as images or iframes (Datawrapper / Flourish):
+      </p>
+
+      <!-- Example chart embed (replace src with your chart URL) -->
+      <!-- <iframe src="https://datawrapper.dwcdn.net/XXXX/" width="100%" height="400" frameborder="0"></iframe> -->
+    </article>
+  </main>
+
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="max-w-[1120px] mx-auto px-4 py-6 text-sm text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
