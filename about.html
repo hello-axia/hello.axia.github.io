@@ -24,8 +24,8 @@
 </head>
 <body class="font-[Inter]">
 
-<!-- Header (desktop unchanged, mobile-friendly) -->
-<header class="sticky top-0 z-40 bg-[var(--navy)]">
+<!-- Header (root pages) -->
+<header class="sticky top-0 z-40 bg-[#051c33]">
   <div class="container py-4 flex items-center gap-6">
     <a href="index.html" class="flex items-center">
       <img src="images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
@@ -40,8 +40,8 @@
       <a class="hover:underline" href="contact.html">Contact</a>
     </nav>
 
-    <!-- Mobile hamburger (only shows on small screens) -->
-    <button id="navToggle" type="button" class="md:hidden text-white p-2 ml-auto" aria-label="Toggle navigation">
+    <!-- Mobile menu toggle -->
+    <button id="navToggle" class="md:hidden text-white p-2 ml-auto" aria-label="Open menu">
       <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
            viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -49,22 +49,19 @@
       </svg>
     </button>
 
-    <!-- Desktop search (unchanged) -->
     <div class="ml-auto hidden md:block">
-      <input id="search" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
+      <input id="navSearch" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
     </div>
   </div>
 
-  <!-- Mobile dropdown menu (hidden by default) -->
-  <div id="mobileMenu" class="hidden md:hidden bg-[var(--navy)] text-white">
-    <div class="container py-3 flex flex-col gap-3">
-      <a href="insights.html">Insights</a>
-      <a href="foundations.html">Foundations</a>
-      <a href="articles.html">All Articles</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <input placeholder="Search…" class="w-full border rounded px-3 py-2 text-sm bg-white text-black" />
-    </div>
+  <!-- Mobile nav -->
+  <div id="mobileMenu" class="hidden flex-col bg-[#051c33] text-white p-4 space-y-3 md:hidden">
+    <a href="insights.html">Insights</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="articles.html">All Articles</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <input placeholder="Search…" class="w-full border rounded px-3 py-2 text-sm bg-white text-black" />
   </div>
 </header>
 
@@ -213,12 +210,14 @@
 </footer>
 
 <script>
-  // Footer year
-  document.getElementById('year').textContent = new Date().getFullYear();
+  // Footer year (safe if #year isn't present)
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
 
-  // Simple search (filters right-hand cards by data-title/data-tags)
-  const search = document.getElementById('search');
-  if (search) {
+  // Simple search (only runs if #search + #right-rail exist)
+  (function () {
+    const search = document.getElementById('search');
+    if (!search) return;
     const items = [...document.querySelectorAll('#right-rail article')];
     search.addEventListener('input', e => {
       const q = e.target.value.trim().toLowerCase();
@@ -227,8 +226,9 @@
         el.style.display = hay.includes(q) ? '' : 'none';
       });
     });
-  }
-  <script>
+  })();
+
+  // Mobile nav toggle (only runs if the elements exist)
   (function () {
     const toggle = document.getElementById('navToggle');
     const menu = document.getElementById('mobileMenu');
@@ -237,5 +237,4 @@
       menu.classList.toggle('hidden');
     });
   })();
-</script>
 </script>
