@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Vote Matters — Axia</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Theme + layout (matches other articles) -->
+  <style>
+    :root{
+      --navy:#051c33;     /* Axia navy */
+      --ink:#18181b;      /* body text */
+      --muted:#5b6275;    /* secondary text */
+      --border:#e5e7eb;   /* subtle borders */
+      --brand:#1f4fbf;    /* link accent */
+      --accent:#C7A15A;   /* optional gold */
+    }
+    html,body{ color:var(--ink); background:#fff; }
+    .container{ max-width:1120px; margin-inline:auto; padding-inline:1rem; }
+    .container-article{ max-width:960px; margin-inline:auto; padding-inline:1rem; }
+
+    /* Comfortable rhythm + headings like your other article */
+    .prose p, .prose ul, .prose ol { line-height:1.75; }
+    .prose h2{
+      margin-top:2rem;
+      font-weight:700;
+      font-size:1.875rem;
+    }
+    @media (min-width:768px){
+      .prose h2{ font-size:2.125rem; }
+    }
+
+    /* Drop cap on the first paragraph */
+    .lead:first-letter{
+      float:left; font-size:3.1rem; line-height:1; padding-right:.35rem; color:var(--navy); font-weight:600;
+    }
+
+    /* Bullets consistent with previous page */
+    .bullets{ list-style:disc; padding-left:1.5rem; }
+    .bullets li{ margin-bottom:.5rem; }
+
+    /* Nice blockquote styling for ballot text examples */
+    blockquote{
+      border-left:4px solid var(--border);
+      padding-left:1rem;
+      color:var(--muted);
+      font-style:italic;
+    }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  
+  <header class="sticky top-0 z-40 bg-[#051c33]">
+    <div class="container py-4 flex items-center gap-6">
+      <a href="index.html" class="flex items-center">
+        <img src="images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+        <span class="sr-only">AXIA</span>
+      </a>
+  
+      <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
+        <a class="hover:underline" href="insights.html">Insights</a>
+        <a class="hover:underline" href="foundations.html">Foundations</a>
+        <a class="hover:underline" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+  
+      <!-- Mobile toggle -->
+      <button id="navToggle" class="md:hidden text-white p-2 ml-auto" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+  
+      <!-- Desktop search -->
+      <div class="ml-auto hidden md:block">
+        <input id="navSearch" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
+      </div>
+    </div>
+  
+    <!-- Mobile menu (vertical) -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#051c33] text-white">
+      <div class="container py-3 flex flex-col gap-3">
+        <a href="insights.html">Insights</a>
+        <a href="foundations.html">Foundations</a>
+        <a href="articles.html">All Articles</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <input placeholder="Search…" class="w-full border rounded px-3 py-2 text-sm bg-white text-black" />
+      </div>
+    </div>
+  </header>
+
+
+  <!-- Article -->
+  <main class="container-article py-8 md:py-12">
+    <div class="text-[12px] uppercase tracking-[.12em] text-[var(--muted)] mb-2">Foundations</div>
+    <h1 class="font-serif text-3xl md:text-5xl leading-tight">Your Vote Matters</h1>
+    <div class="mt-3 text-sm text-[var(--muted)]">By Axia Staff • <time datetime="2025-08-15">Aug 15, 2025</time></div>
+
+    <!-- Hero image (replace with your own if you like) -->
+    <figure class="mt-6 md:mt-8">
+      <img src="../images/card-voting.jpg" alt="People casting ballots at a polling place"
+           class="w-full aspect-[16/9] object-cover rounded border border-[var(--border)]" />
+      <figcaption class="text-xs text-[var(--muted)] mt-2">Turnout shapes policy—and the future we inherit.</figcaption>
+    </figure>
+
+    <!-- Body -->
+    <article class="mt-8 prose max-w-none">
+      <p class="lead">
+        Every time to perform our civic duty, we might look at the ballot and think “Does my vote really matter? One more vote won’t change anything.”
+        And honestly, I get it. Politics does often feel overwhelming. It’s like a black box, something we don’t completely understand, and something that
+        feels like it has little effect on our lives. But here is the truth: our lives are being shaped by what we vote for.
+      </p>
+
+      <h2>Why your vote matters</h2>
+      <p>
+        The reality is, older voters turn out in much higher numbers. For example, only 13% of Americans aged 18–29 voted in the midterms,
+        a historic low that left youth interest largely unattended. When we don’t show up, we hand over our future. But when younger people do turn out,
+        we change everything. In 2018 and 2022, we shocked the experts and even shifted the balance in key races.
+      </p>
+      <p>
+        You might think that “my one vote doesn’t matter,” but elections are literally decided by thin margins—
+        sometimes a few hundred votes in a district decide what happens. That one person staying home makes a difference.
+      </p>
+
+      <h2>Should you care?</h2>
+      <p>
+        Now the question is: should you care? Let me tell you, I think you should. What is on the ballot isn’t abstract. It's also not just the political figures who are running that you are voting on. It’s your everyday life.
+      </p>
+      <ul class="bullets">
+        <li><strong>Minimum Wage Increases</strong> (how much you make)</li>
+        <li><strong>Rent Control Measures</strong> (how much rent costs)</li>
+        <li><strong>School Funding Bonds</strong> (the quality of education)</li>
+        <li><strong>Medicaid Expansions</strong> (how much insurance you pay)</li>
+        <li><strong>Marijuana Legalization</strong> (if you can legally smoke)</li>
+        <li><strong>Gun Safety Laws</strong> (who should own guns)</li>
+      </ul>
+
+      <h2>What ballot language looks like</h2>
+<p>And the voting is very straightforward on these ballots. For prompts like these, you simply answer “Yes” or “No.”</p>
+
+<div class="mt-4 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+  <!-- Card 1: Minimum wage -->
+  <article class="rounded border border-[var(--border)] bg-white p-4">
+    <h3 class="font-semibold">Minimum Wage Increase</h3>
+    <blockquote class="mt-2 italic text-[var(--muted)] border-l-4 border-[var(--border)] pl-3">
+      “Raises minimum wage to $10.00 per hour effective September 30, 2021… reaches $15.00 per hour on
+      September 30, 2026… future increases adjusted annually for inflation.”
+    </blockquote>
+    <ul class="mt-3 text-sm text-[var(--muted)] list-disc pl-5">
+      <li>Step-up to $15 by 2026</li>
+      <li>Then indexed to inflation</li>
+    </ul>
+  </article>
+
+  <!-- Card 2: Rent control -->
+  <article class="rounded border border-[var(--border)] bg-white p-4">
+    <h3 class="font-semibold">Rent Control Authority</h3>
+    <blockquote class="mt-2 italic text-[var(--muted)] border-l-4 border-[var(--border)] pl-3">
+      “Expands local governments’ authority to enact rent control… repeals Costa-Hawkins… allows limits on
+      any housing, including single-family homes and post-1995 apartments… allows limits between tenancies.”
+    </blockquote>
+    <ul class="mt-3 text-sm text-[var(--muted)] list-disc pl-5">
+      <li>Broader local power to cap rents</li>
+      <li>Applies to more types/years of housing</li>
+    </ul>
+  </article>
+
+  <!-- Card 3: School bonds -->
+  <article class="rounded border border-[var(--border)] bg-white p-4">
+    <h3 class="font-semibold">K-12 & Community College Bonds</h3>
+    <blockquote class="mt-2 italic text-[var(--muted)] border-l-4 border-[var(--border)] pl-3">
+      “Authorizing bonds for public schools and community college facilities… $10 billion for repairs and new
+      construction… with annual audits.”
+    </blockquote>
+    <ul class="mt-3 text-sm text-[var(--muted)] list-disc pl-5">
+      <li>$10B for facilities</li>
+      <li>Audit and oversight required</li>
+    </ul>
+  </article>
+</div>
+
+<p class="mt-4">
+  Every single election, these choices are being made. And when you don’t show up, someone else makes them for you.
+</p>
+
+      <h2>Bottom line</h2>
+      <p>
+        Here’s the bottom line: voting isn’t just a duty. It’s your right. It’s saying: I’m here, I care, and I deserve a say in the world I’ll inherit.
+        Every ballot is a direct stake in decisions that shape your daily life. From how much you pay for college to whether your neighborhood gets affordable housing,
+        your single vote matters when these decisions hinge on a couple hundred votes.
+      </p>
+
+      <p class="mt-8">
+        <a href="../articles.html" class="inline-flex items-center gap-2 text-[var(--brand)] hover:underline">← Back to All Articles</a>
+      </p>
+    </article>
+  </main>
+
+  <!-- Footer (shared across the site) -->
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="container py-8 flex flex-col md:flex-row md:items-center md:justify-between text-sm gap-6">
+      <div>
+        <div class="text-xl font-serif">AXIA</div>
+        <p class="text-[var(--muted)] mt-2">Independent policy analysis and research.</p>
+      </div>
+      <nav class="flex flex-wrap gap-4">
+        <a class="hover:underline" href="../insights.html">Insights</a>
+        <a class="hover:underline" href="../foundations.html">Foundations</a>
+        <a class="hover:underline" href="../articles.html">All Articles</a>
+        <a class="hover:underline" href="../about.html">About</a>
+        <a class="hover:underline" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="border-t border-[var(--border)] text-xs text-center py-4 text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+
+  <!-- Small JS: year + vertical menu toggle -->
+
+  <script>
+    // Auto-fix relative paths when inside /articles/ pages
+    (function () {
+      const inArticles = location.pathname.includes('/articles/');
+      if (!inArticles) return;
+  
+      const prefix = '../';
+  
+      // Fix the home link and logo
+      const home = document.querySelector('header a[href="index.html"]');
+      if (home) home.setAttribute('href', prefix + 'index.html');
+  
+      const logo = document.querySelector('header img[alt="AXIA"]');
+      if (logo && !logo.src.includes('http')) {
+        logo.src = prefix + 'images/logo.png';
+      }
+  
+      // Fix all header links (desktop + mobile)
+      document.querySelectorAll('header nav a, #mobileMenu a').forEach(a => {
+        const href = a.getAttribute('href');
+        if (!href) return;
+        // skip external/anchors/absolute
+        if (href.startsWith('http') || href.startsWith('#') || href.startsWith('/')) return;
+        a.setAttribute('href', prefix + href);
+      });
+    })();
+  </script>
+</body>
+</html>
