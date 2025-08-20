@@ -35,7 +35,7 @@
 
     <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
       <a class="hover:underline" href="insights.html">Insights</a>
-      <a class="hover:underline" href="foundations.html">Foundations</a>
+      <a class="underline underline-offset-4" href="foundations.html">Foundations</a>
       <a class="hover:underline" href="articles.html">All Articles</a>
       <a class="hover:underline" href="about.html">About</a>
       <a class="hover:underline" href="contact.html">Contact</a>
@@ -225,21 +225,24 @@
       </p>
 
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
-          <a href="articles/example-article.html">
-            <img src="images/card7.jpg" alt="" class="w-full h-40 object-cover">
-          </a>
-          <div class="p-4">
-            <a class="font-semibold leading-snug hover:underline"
-               href="articles/example-article.html">
-              How a bill becomes law (today, not in theory)
-            </a>
-            <p class="text-sm text-[var(--muted)] mt-2">
-              Committees, rules, reconciliation, and veto points simplified.
-            </p>
-            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
-          </div>
-        </article>
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white"
+        data-title="why your vote matters"
+        data-tags="governance,democracy,voting"
+        data-desc="importance of youth turnout and ballot measures">
+ <a href="articles/your-vote-matters.html">
+   <img src="images/card-voting.jpg" alt="Why Your Vote Matters" class="w-full h-40 object-cover">
+ </a>
+ <div class="p-4">
+   <a class="font-semibold leading-snug hover:underline"
+      href="articles/why-your-vote-matters.html">
+     Why Your Vote Matters
+   </a>
+   <p class="text-sm text-[var(--muted)] mt-2">
+     From minimum wage to rent control—why Gen Z’s turnout decides the future.
+   </p>
+   <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
+ </div>
+</article>
 
         <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
           <a href="articles/example-article.html">
@@ -374,8 +377,8 @@
   // Simple search (only runs if #search + #right-rail exist)
   (function () {
     const search = document.getElementById('search');
-    if (!search) return;
-    const items = [...document.querySelectorAll('#right-rail article')];
+    const items = document.querySelectorAll('#right-rail article');
+    if (!search || !items.length) return;  // nothing to wire up on this page
     search.addEventListener('input', e => {
       const q = e.target.value.trim().toLowerCase();
       items.forEach(el => {
@@ -391,7 +394,10 @@
     const menu = document.getElementById('mobileMenu');
     if (!toggle || !menu) return;
     toggle.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
+      const hidden = menu.classList.toggle('hidden');
+      toggle.setAttribute('aria-expanded', String(!hidden));
     });
   })();
 </script>
+</body>
+</html>
