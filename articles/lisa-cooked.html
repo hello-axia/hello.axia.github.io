@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lisa Cook, Trump, and the Battle Over Fed Interest Rates — Axia</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon (prevents ? icon) -->
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+  <style>
+    :root{
+      --navy:#051c33;
+      --ink:#18181b;
+      --muted:#5b6275;
+      --border:#e5e7eb;
+      --brand:#1f4fbf;
+    }
+    html,body{ color:var(--ink); background:#fff; }
+    .container{ max-width:1120px; margin-inline:auto; padding-inline:1rem; }
+    .container-article{ max-width:960px; margin-inline:auto; padding-inline:1rem; }
+
+    .prose p, .prose ul, .prose ol{ line-height:1.75; }
+    .prose h2{ margin-top:2rem; font-weight:700; font-size:1.875rem; }
+    @media (min-width:768px){ .prose h2{ font-size:2.125rem; } }
+
+    /* Drop cap like your other articles */
+    .lead:first-letter{
+      float:left; font-size:3.1rem; line-height:1; padding-right:.35rem; color:var(--navy); font-weight:600;
+    }
+
+    .bullets{ list-style:disc; padding-left:1.5rem; }
+    .bullets li{ margin-bottom:.5rem; }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Header (same as other pages) -->
+  <header class="sticky top-0 z-40 bg-[var(--navy)]">
+    <div class="container py-4 flex items-center gap-6">
+      <a href="../index.html" class="flex items-center">
+        <img src="../images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+        <span class="sr-only">AXIA</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
+        <a class="hover:underline" href="../insights.html">Insights</a>
+        <a class="hover:underline" href="../foundations.html">Foundations</a>
+        <a class="hover:underline" href="../articles.html">All Articles</a>
+        <a class="hover:underline" href="../about.html">About</a>
+        <a class="hover:underline" href="../contact.html">Contact</a>
+      </nav>
+      <button id="navToggle" class="md:hidden text-white p-2 ml-auto" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <div class="ml-auto hidden md:block">
+        <input id="navSearch" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-[var(--navy)] text-white">
+      <div class="container py-3 flex flex-col gap-3">
+        <a href="../insights.html">Insights</a>
+        <a href="../foundations.html">Foundations</a>
+        <a href="../articles.html">All Articles</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <input placeholder="Search…" class="w-full border rounded px-3 py-2 text-sm bg-white text-black" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Article -->
+  <main class="container-article py-8 md:py-12">
+    <div class="text-[12px] uppercase tracking-[.12em] text-[var(--muted)] mb-2">Insights</div>
+    <h1 class="font-serif text-3xl md:text-5xl leading-tight">Lisa Cook, Trump, and the Battle Over Fed Interest Rates</h1>
+    <div class="mt-3 text-sm text-[var(--muted)]">By Axia Staff • <time datetime="2025-08-21">Aug 21, 2025</time></div>
+
+    <!-- Hero -->
+    <figure class="mt-6 md:mt-8">
+      <img src="../images/card-lisa-cooked.jpg" alt="Lisa Cook pressured to resign" class="w-full aspect-[16/9] object-cover rounded border border-[var(--border)]" />
+      <figcaption class="text-xs text-[var(--muted)] mt-2">
+        Personnel pressure meets monetary policy—at a pivotal moment for rates.
+      </figcaption>
+    </figure>
+
+    <article class="mt-8 prose max-w-none">
+
+      <!-- Intro with drop cap; exact wording preserved; sources as inline muted links -->
+      <p class="lead">
+        Federal Board member Lisa Cook was recently pressured by President Trump to resign her position. Bill Pulte, Director of the Federal Housing Finance Agency has accused her of mortgage fraud <a href="https://www.vox.com/the-logoff-newsletter-trump/458719/federal-reserve-bill-pulte-lisa-cook-mortgage-fraud" target="_blank" rel="noopener" class="text-[var(--muted)] text-sm">(Vox)</a>.
+      </p>
+
+      <p>While this is happening on the surface, what may be the deeper motives?</p>
+
+      <p>
+        Trump has publicly called for <a href="federal-reserve-interest-rates.html" class="text-[var(--brand)] underline">interest rate cuts</a>, and by pushing out Cook, who would normally serve until 2038, Trump might be aiming to get more allies into the board (of the Fed) to cut interest rates. This would alter a key lever of economic policy.
+      </p>
+
+      <h2>What is the state of the economy right now?</h2>
+
+      <!-- Two-box layout: Current vs Fed Goals -->
+      <section class="mt-4 grid gap-6 md:grid-cols-2">
+        <!-- Current -->
+        <div class="border border-[var(--border)] rounded-lg p-5 bg-white">
+          <h3 class="font-semibold">Current</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><strong>Inflation:</strong> 4.25% to 4.50%, overshooting the Fed’s 2% goal. <a href="https://www.investopedia.com/dot-plot-june-2025-11757391" target="_blank" rel="noopener" class="text-[var(--muted)] text-xs">(Investopedia)</a></li>
+            <li><strong>Unemployment:</strong> near 4.2%, which is close to the 4% average goal. <a href="https://www.morningstar.com/news/marketwatch/20250816188/im-confused-why-does-president-trump-want-a-rate-cut-so-badly" target="_blank" rel="noopener" class="text-[var(--muted)] text-xs">(Morningstar)</a></li>
+            <li><strong>GDP Growth:</strong> modest—estimated at 1–1.5% <a href="../articles/gdp-growth-2025.html" class="text-[var(--brand)] underline text-xs">(article on GDP here)</a></li>
+          </ul>
+        </div>
+
+        <!-- Fed Goals -->
+        <div class="border border-[var(--border)] rounded-lg p-5 bg-white">
+          <h3 class="font-semibold">Fed Goals</h3>
+          <ul class="mt-3 space-y-2 text-sm">
+            <li><strong>Inflation Target:</strong> 2%</li>
+            <li><strong>Unemployment Goal:</strong> ~4%</li>
+            <li><strong>GDP Growth Target:</strong> 1.8% to 2.0% a year.</li>
+          </ul>
+        </div>
+      </section>
+
+      <h2>Why Trump Might Want to Cut Interest Rates</h2>
+      <p>Trump wants a significant interest rate cut, from 4% to 1%. <a href="https://www.piie.com/blogs/realtime-economics/2025/feds-september-dilemma" target="_blank" rel="noopener" class="text-[var(--muted)] text-sm">(PIIE)</a></p>
+
+      <ul class="bullets">
+        <li><strong>Stimulate economic activity:</strong> Why? Lower borrowing costs encourages spending money.</li>
+        <li><strong>Lighten fiscal burdens:</strong> Why? With government debts above $37 trillion, reducing rates would lower interest payments on that debt. <a href="https://www.marketwatch.com/story/im-confused-why-does-president-trump-want-a-rate-cut-so-badly-whats-wall-streets-view-ce9a72f9" target="_blank" rel="noopener" class="text-[var(--muted)] text-sm">(MarketWatch)</a></li>
+        <li><strong>Counteract inflationary pressure from tariffs:</strong> Why? Trump argues tariffs are pushing prices up, so interest rate cuts could help offset the costs. <a href="https://apnews.com/article/powell-trump-interest-rates-jackson-hole-b4095cd609a747337a98cce885912609" target="_blank" rel="noopener" class="text-[var(--muted)] text-sm">(AP News)</a></li>
+      </ul>
+
+      <h2>What Rate Cuts Would Mean Right Now</h2>
+      <ul class="bullets">
+        <li><strong>Consumers:</strong> Cheaper mortgages and loans</li>
+        <li><strong>Businesses:</strong> Lower borrowing costs and reinvigorate investment and hiring</li>
+        <li><strong>Government Finances:</strong> Reduced interest costs on federal debt</li>
+      </ul>
+
+      <h2>What are the Risks of lowering Interest Rates?</h2>
+      <ul class="bullets">
+        <li>Lowering interest rates could overheat inflation, causing prices to skyrocket, and lag behind wages.</li>
+        <li>It could bring about Asset Bubbles. These may cause things like the 2008 financial crisis. <a href="../articles/asset-bubbles.html" class="text-[var(--brand)] underline">(Read more about Asset Bubbles here)</a></li>
+        <li>Reduce credibility to the Feds: Fed’s main job is to keep prices stable. If cutting interest rates bring prices up too much, people may lose confidence in the Fed’s commitment to controlling prices.</li>
+      </ul>
+
+      <h2>Bottom line</h2>
+      <p>The economy is at a crossroad: inflation is high, growth is slow, and the unemployment rate is rising. Trump’s push for interest rate cuts shows a desire to reignite the economy. But, the Fed must balance the risks against inflation. The tension between Lisa Cooks and Trump may be a physical manifestation of this crossroad.</p>
+
+      <!-- Sources (small, muted, not intrusive) -->
+      <section class="mt-10" aria-labelledby="sources">
+        <h2 id="sources" class="text-base font-semibold">Sources</h2>
+        <ul class="mt-2 space-y-1 text-xs text-[var(--muted)]">
+          <li>Lisa Cook resignation + Bill Pulte accusation: <a class="underline" href="https://www.vox.com/the-logoff-newsletter-trump/458719/federal-reserve-bill-pulte-lisa-cook-mortgage-fraud" target="_blank" rel="noopener">Vox</a>.</li>
+          <li>Inflation data context: <a class="underline" href="https://www.investopedia.com/dot-plot-june-2025-11757391" target="_blank" rel="noopener">Investopedia</a>.</li>
+          <li>Unemployment reference: <a class="underline" href="https://www.morningstar.com/news/marketwatch/20250816188/im-confused-why-does-president-trump-want-a-rate-cut-so-badly" target="_blank" rel="noopener">Morningstar</a>.</li>
+          <li>GDP growth article placeholder: Axia planned GDP piece.</li>
+          <li>Trump’s rate cut push: <a class="underline" href="https://www.piie.com/blogs/realtime-economics/2025/feds-september-dilemma" target="_blank" rel="noopener">PIIE</a>.</li>
+          <li>Debt burden context: <a class="underline" href="https://www.marketwatch.com/story/im-confused-why-does-president-trump-want-a-rate-cut-so-badly-whats-wall-streets-view-ce9a72f9" target="_blank" rel="noopener">MarketWatch</a>.</li>
+          <li>Tariff inflation pressure: <a class="underline" href="https://apnews.com/article/powell-trump-interest-rates-jackson-hole-b4095cd609a747337a98cce885912609" target="_blank" rel="noopener">AP News</a>.</li>
+        </ul>
+      </section>
+
+      <p class="mt-8">
+        <a href="../articles.html" class="inline-flex items-center gap-2 text-[var(--brand)] hover:underline">← Back to All Articles</a>
+      </p>
+
+    </article>
+  </main>
+
+  <!-- Footer (same as other pages) -->
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="container py-8 flex flex-col md:flex-row md:items-center md:justify-between text-sm gap-6">
+      <div>
+        <div class="text-xl font-serif">AXIA</div>
+        <p class="text-[var(--muted)] mt-2">Independent policy analysis and research.</p>
+      </div>
+      <nav class="flex flex-wrap gap-4">
+        <a class="hover:underline" href="../insights.html">Insights</a>
+        <a class="hover:underline" href="../foundations.html">Foundations</a>
+        <a class="hover:underline" href="../articles.html">All Articles</a>
+        <a class="hover:underline" href="../about.html">About</a>
+        <a class="hover:underline" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="border-t border-[var(--border)] text-xs text-center py-4 text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+
+  <script>
+    // Footer year (safe if #year doesn't exist)
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    (function () {
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    })();
+  </script>
+</body>
+</html>
