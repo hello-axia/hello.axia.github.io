@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>The US National Debt — Axia</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Theme + layout -->
+  <style>
+    :root{
+      --navy:#051c33;     /* Axia navy */
+      --ink:#18181b;      /* body text */
+      --muted:#5b6275;    /* secondary text */
+      --border:#e5e7eb;   /* subtle borders */
+      --brand:#1f4fbf;    /* link accent */
+      --accent:#C7A15A;   /* optional gold */
+    }
+    html,body{ color:var(--ink); background:#fff; }
+
+    /* Full-width shell for header/footer */
+    .container{ max-width:1120px; margin-inline:auto; padding-inline:1rem; }
+
+    /* Article reading width */
+    .container-article{ max-width:960px; margin-inline:auto; padding-inline:1rem; }
+
+    /* Comfortable rhythm */
+    .prose p, .prose ul, .prose ol{ line-height:1.75; }
+    .prose h2{
+      margin-top:2rem;
+      font-weight:700;
+      font-size:1.875rem;
+    }
+    @media (min-width:768px){
+      .prose h2{ font-size:2.125rem; }
+    }
+
+    /* Drop cap on first paragraph */
+    .lead:first-letter{
+      float:left; font-size:3.1rem; line-height:1; padding-right:.35rem; color:var(--navy); font-weight:600;
+    }
+
+    /* Force visible bullets + spacing on lists */
+    .bullets{ list-style:disc; padding-left:1.5rem; }
+    .bullets li{ margin-bottom:.5rem; }
+  </style>
+</head>
+
+<body class="font-sans">
+
+  <!-- Header (same as other pages) -->
+  <header class="sticky top-0 z-40 bg-[#051c33]">
+    <div class="container py-4 flex items-center gap-6">
+      <a href="../index.html" class="flex items-center">
+        <img src="../images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+        <span class="sr-only">AXIA</span>
+      </a>
+
+      <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
+        <a class="hover:underline" href="../insights.html">Insights</a>
+        <a class="hover:underline" href="../foundations.html">Foundations</a>
+        <a class="hover:underline" href="../articles.html">All Articles</a>
+        <a class="hover:underline" href="../about.html">About</a>
+        <a class="hover:underline" href="../contact.html">Contact</a>
+      </nav>
+
+      <!-- Mobile toggle -->
+      <button id="navToggle" class="md:hidden text-white p-2 ml-auto" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+
+      <!-- Desktop search -->
+      <div class="ml-auto hidden md:block">
+        <input id="navSearch" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
+      </div>
+    </div>
+
+    <!-- Mobile menu (vertical) -->
+    <div id="mobileMenu" class="hidden md:hidden bg-[#051c33] text-white">
+      <div class="container py-3 flex flex-col gap-3">
+        <a href="../insights.html">Insights</a>
+        <a href="../foundations.html">Foundations</a>
+        <a href="../articles.html">All Articles</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <input placeholder="Search…" class="w-full border rounded px-3 py-2 text-sm bg-white text-black" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Article -->
+  <main class="container-article py-8 md:py-12">
+    <div class="text-[12px] uppercase tracking-[.12em] text-[var(--muted)] mb-2">Foundations</div>
+    <h1 class="font-serif text-3xl md:text-5xl leading-tight">The US National Debt</h1>
+    <div class="mt-3 text-sm text-[var(--muted)]">By Axia Staff • <time datetime="2025-08-22">Aug 22, 2025</time></div>
+
+    <!-- Hero -->
+    <figure class="mt-6 md:mt-8">
+      <img src="../images/card-national-debt.jpg" alt="U.S. Capitol and debt clock"
+           class="w-full aspect-[16/9] object-cover rounded border border-[var(--border)]" />
+      <figcaption class="text-xs text-[var(--muted)] mt-2">
+        The U.S. debt reflects national priorities, trade-offs, and promises to citizens.
+      </figcaption>
+    </figure>
+
+    <!-- Body -->
+    <article class="mt-8 prose max-w-none">
+      <p class="lead">
+        The US national debt. Something most of us have heard of. Politicians warn us about it, but honestly, it just sounds like a big number that doesn’t have any bearing on our lives. But if it’s always all over the news, it’s got to be important, right? So, what actually is the US debt? Why does it matter? And is there anything we ordinary people can do about it?
+      </p>
+
+      <h2>What is the US Debt? </h2>
+      <p>If you know how a credit card works, think of the national debt as the US spending money it doesn’t have. The national debt is the money the US has borrowed over time to cover the gap between what the nation spends and what it collects in taxes. </p>
+      <p><strong>Spending &gt; Taxes = Borrowing </strong></p>
+
+      <h2>Who does the US borrow from? </h2>
+      <p>The government sells bonds (Treasury securities) to investors. These investors include: US citizens, foreign governments, and institutions. The investors are essentially lending money to the US in exchange for interest payments. </p>
+
+      <h2>How big is the debt? </h2>
+      <p><strong>37 Trillion dollars as of 2025. </strong></p>
+
+      <h2>Why does the US borrow so much? </h2>
+      <ul class="bullets">
+        <li>Defense spending (military, wars, global commitments)</li>
+        <li>Social Programs (Social Security, Medicare, Medicaid) </li>
+        <li>Tax Cuts (lower government revenue without decreasing the amount it spends) </li>
+        <li>Crisis Response (ex: COVID-19)</li>
+      </ul>
+
+      <h2>Why does it matter? </h2>
+      <p>Debt itself isn’t a bad thing. The real issue is whether debt is sustainable and what trade-offs it creates: </p>
+      <ul class="bullets">
+        <li><strong>Interest Payment.</strong> Just like with a credit card, the government has to pay interest. In 2023, the interest paid on the US debt was $900 billion. This money could have been spent on the people. </li>
+        <li><strong>Investor Confidence.</strong> If lenders start doubting America’s ability to pay back debt, this may lead them to charge greater interest rates, thereby increasing the debt. </li>
+        <li><strong>Crowding Out.</strong> The government, businesses, and households all draw from the same pool of money. When the government borrows too much, it doesn’t leave a lot for the rest of the nation. </li>
+      </ul>
+
+      <h2>Why does it matter to you! </h2>
+      <p>National debt may seem abstract, but it filters into your everyday life. </p>
+      <ul class="bullets">
+        <li><strong>Higher Interest Rates.</strong> If government borrowing pushes rates up, mortgages, student loans, and credit cards all get more expensive</li>
+        <li><strong>Inflation Pressure.</strong> A large debt can fuel inflation. If borrowing is high, spending will be higher, leading to greater demand and subsequently higher inflation (<a href="./should-we-hate-inflation.html" class="text-[var(--brand)] underline">read more on inflation here</a>)</li>
+        <li><strong>Future Taxes.</strong> Today’s borrowing may lead to tomorrow’s tax increases </li>
+        <li><strong>Government Services.</strong> The more money the government spends on interest, the less money available for social programs (EBT, Medicare, Child Health Insurance Program) </li>
+      </ul>
+
+      <h2>What can be done? </h2>
+      <p>Fixing the debt usually requires one (or both) of two unpopular choices: </p>
+      <ul class="bullets">
+        <li>Spend less (cut programs, defense, benefits, or subsidies) </li>
+        <li>Tax more (raises income taxes, corporate taxes) </li>
+      </ul>
+      <p>Some economists suggest: </p>
+      <ul class="bullets">
+        <li>Reforming long-term commitments like Social Security and Medicare </li>
+        <li>Growing the economy faster </li>
+        <li>Improving efficiency and oversight of government programs </li>
+      </ul>
+
+      <h2>What can you do about it? </h2>
+      <p>While individuals don’t write federal budgets, citizens do shape the choices policymakers make: </p>
+      <ul class="bullets">
+        <li><strong>Stay informed.</strong> Understand the trade-offs when politicians promise tax cuts and spending increases </li>
+        <li><strong>Vote.</strong> Elected officials decide whether to rein in or expand debt </li>
+      </ul>
+
+      <h2>Bottom Line</h2>
+      <p>The US debt is not just a giant number, it shows the national priorities, trade-offs, and promises to citizens. Debt is normal, but unsustained debt growth can cause inflation, limit flexibility and burden future generations. </p>
+
+      <p class="mt-8"><a href="../articles.html" class="inline-flex items-center gap-2 text-[var(--brand)] hover:underline">← Back to All Articles</a></p>
+    </article>
+  </main>
+
+  <!-- Footer (shared across the site) -->
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="container py-8 flex flex-col md:flex-row md:items-center md:justify-between text-sm gap-6">
+      <div>
+        <div class="text-xl font-serif">AXIA</div>
+        <p class="text-[var(--muted)] mt-2">Independent policy analysis and research.</p>
+      </div>
+
+      <nav class="flex flex-wrap gap-4">
+        <a class="hover:underline" href="../insights.html">Insights</a>
+        <a class="hover:underline" href="../foundations.html">Foundations</a>
+        <a class="hover:underline" href="../articles.html">All Articles</a>
+        <a class="hover:underline" href="../about.html">About</a>
+        <a class="hover:underline" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+
+    <div class="border-t border-[var(--border)] text-xs text-center py-4 text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+
+  <script>
+    // Footer year (safe if #year isn't present)
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Mobile nav toggle (only runs if the elements exist)
+    (function () {
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    })();
+  </script>
+
+</body>
+</html>
