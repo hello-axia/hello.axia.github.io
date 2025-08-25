@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recession Fundamentals — Axia</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon (prevents ? icon) -->
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+  <style>
+    :root{
+      --navy:#051c33;
+      --ink:#18181b;
+      --muted:#5b6275;
+      --border:#e5e7eb;
+      --brand:#1f4fbf;
+    }
+    html,body{ color:var(--ink); background:#fff; }
+    .container{ max-width:1120px; margin-inline:auto; padding-inline:1rem; }
+    .container-article{ max-width:960px; margin-inline:auto; padding-inline:1rem; }
+
+    .prose p, .prose ul, .prose ol{ line-height:1.75; }
+    .prose h2{ margin-top:2rem; font-weight:700; font-size:1.875rem; }
+    @media (min-width:768px){ .prose h2{ font-size:2.125rem; } }
+
+    /* Bullets consistent with your other articles */
+    .bullets{ list-style:disc; padding-left:1.5rem; }
+    .bullets li{ margin-bottom:.5rem; }
+
+    /* Float note (like your CPI “Note” box) */
+    .note-float{
+      float:right;
+      width:min(340px,42%);
+      margin:.25rem 0 1rem 1.25rem;
+      background:#fafafa;
+      border:1px solid var(--border);
+      border-radius:.5rem;
+      padding:1rem;
+    }
+    .note-kicker{ font-size:.7rem; text-transform:uppercase; letter-spacing:.12em; color:var(--muted); }
+    @media (max-width:768px){ .note-float{ float:none; width:100%; margin:.75rem 0 1rem 0; } }
+  </style>
+</head>
+<body class="font-sans">
+
+  <!-- Header (same as other pages) -->
+  <header class="sticky top-0 z-40 bg-[var(--navy)]">
+    <div class="container py-4 flex items-center gap-6">
+      <a href="../index.html" class="flex items-center">
+        <img src="../images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+        <span class="sr-only">AXIA</span>
+      </a>
+      <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
+        <a class="hover:underline" href="../insights.html">Insights</a>
+        <a class="hover:underline" href="../foundations.html">Foundations</a>
+        <a class="hover:underline" href="../articles.html">All Articles</a>
+        <a class="hover:underline" href="../about.html">About</a>
+        <a class="hover:underline" href="../contact.html">Contact</a>
+      </nav>
+      <button id="navToggle" class="md:hidden text-white p-2 ml-auto" aria-label="Open menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <div class="ml-auto hidden md:block">
+        <input id="navSearch" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-[var(--navy)] text-white">
+      <div class="container py-3 flex flex-col gap-3">
+        <a href="../insights.html">Insights</a>
+        <a href="../foundations.html">Foundations</a>
+        <a href="../articles.html">All Articles</a>
+        <a href="../about.html">About</a>
+        <a href="../contact.html">Contact</a>
+        <input placeholder="Search…" class="w-full border rounded px-3 py-2 text-sm bg-white text-black" />
+      </div>
+    </div>
+  </header>
+
+  <!-- Article -->
+  <main class="container-article py-8 md:py-12">
+    <div class="text-[12px] uppercase tracking-[.12em] text-[var(--muted)] mb-2">Foundations</div>
+    <h1 class="font-serif text-3xl md:text-5xl leading-tight">Recession Fundamentals</h1>
+    <div class="mt-3 text-sm text-[var(--muted)]">By Axia Staff • <time datetime="2025-08-22">Aug 2025</time></div>
+
+    <!-- Hero -->
+    <figure class="mt-6 md:mt-8">
+      <img src="../images/card-recession-fundamentals.jpg" alt="Recession fundamentals"
+           class="w-full aspect-[16/9] object-cover rounded border border-[var(--border)]" />
+      <figcaption class="text-xs text-[var(--muted)] mt-2">
+        Understanding recessions helps make sense of headlines and policy moves.
+      </figcaption>
+    </figure>
+
+    <!-- Body -->
+    <article class="mt-8 prose max-w-none">
+
+      <p>Every few years, talk of a “recession” dominates headlines. This may coincide with the stock markets dipping, jobs being harder to find (like right now), and people tightening their budgets. But what exactly is a recession, what causes, why does it matter so much, and what are some signs that the economy is entering into one? </p>
+
+      <h2>What is a recession? </h2>
+      <p>At its core, a recession is a significant slowdown in economic activity that lasts for an extended period of time. Economists often describe it as two straight quarters (6 months) of falling GDP. </p>
+
+      <h2>What causes a recession? </h2>
+      <p>Recessions can be triggered by a number of different causes, but some common ones include: </p>
+      <ul class="bullets">
+        <li>High Interest Rates. When borrowing gets too expensive, people and businesses start cutting back on spending. (link to <a href="./federal-reserve-interest-rates.html" class="text-[var(--brand)] underline">interest rate article</a>) </li>
+        <li>Inflation. Rising prices when wages lag can reduce purchasing power, reducing consumer demand. </li>
+        <li>Financial Crises. Bank failures or bursting asset bubbles (read more on <a href="./asset-bubbles.html" class="text-[var(--brand)] underline">asset bubbles here</a>) may freeze lending and investments. </li>
+        <li>Shocks. Unexpected events, like war, pandemics, or oil price spikes, can disrupt normal activity. </li>
+      </ul>
+
+      <h2>How do Recessions affect you? </h2>
+      <p>Even if you don’t invest in stocks, recessions touch ordinary lives in big ways: </p>
+      <ul class="bullets">
+        <li>Jobs. Unemployment may skyrocket as companies lay off to cut costs. </li>
+        <li>Income. Wages may stagnate, bonuses shrink, and promotions slow down. </li>
+        <li>Credit. Loans and credit cards get harder to access as banks tighten lending standards. </li>
+        <li>Savings and Retirement. Stock portfolios and retirement accounts often lose value during downturns. </li>
+        <li>Everyday Costs. Life gets more expensive. </li>
+      </ul>
+
+      <h2>How the Government Responds. </h2>
+      <p>Policymakers typically try to soften recessions with 2 big tools </p>
+      <p>Monetary Policy (The Fed) </p>
+      <ul class="bullets">
+        <li>Cut interest rates to encourage borrowing and spending</li>
+        <li><a href="./federal-reserve-interest-rates.html" class="text-[var(--brand)] underline">Read more on interest rates and the Fed here</a></li>
+      </ul>
+      <p>Fiscal Policy (Congress & the President) </p>
+      <ul class="bullets">
+        <li>Stimulus checks or tax cuts to put more money in the economy </li>
+        <li>Increase government spending on infrastructure, health, or aid programs to boost demand </li>
+      </ul>
+      <h2>Signs a Recession is at hand</h2>
+
+      <div class="flex flex-col md:flex-row gap-6 items-start">
+        <!-- Left side: list -->
+        <ul class="bullets flex-1">
+          <li>Rising Unemployment. If businesses start laying off workers or stop hiring, it may be an indication that sales are lower than expected. </li>
+          <li>Falling Consumer Confidence. Surveys show when people are worried about the economy, they spend less.</li>
+          <li>Slowing Retail Sales. If stores report declining sales, it may be an indication of households spending less.  </li>
+          <li>Stock Market Volatility. Big drops in the stock market may be an indication of investors' lack of confidence in future growth. </li>
+        </ul>
+      
+        <!-- Right side: indicator box -->
+        <aside class="border border-[var(--border)] rounded-lg p-6 bg-gray-50 shadow-sm md:w-[360px] lg:w-[420px]">
+          <div class="note-kicker">Indicator</div>
+          <h3 class="font-semibold text-lg mb-2">Inverted Yield Curve</h3>
+          <p class="text-sm leading-relaxed">
+            When short term interest rates rise above long-term rates, it often signals investors expect slower growth. 
+            This one has historically been one of the most reliable recession predictors.
+          </p>
+          <p class="mt-3 text-sm">
+            Read more on Inverted Yield Curves <a href="./inverted-yield-curve.html" class="text-[var(--brand)] underline">here</a>.
+          </p>
+        </aside>
+      </div>
+      <p>These signals don’t happen all at once, and sometimes the economy rebounds before a true recession hits. But together, they form a picture of how both consumers and businesses are feeling, whether the slowdown is temporary or something deeper. </p>
+
+      <h2>Bottom Line</h2>
+      <p>A recession is more than just a technical term, it is a period where jobs, wages, and opportunities become harder to find. While downturns are a natural part of the economic cycle, their effects are deeply felt by almost everyone. But by understanding what causes them and how the government responds, you can better prepare for the ups and downs of the economy, and make sense of the headlines when the recession word appears again. </p>
+
+      <p class="mt-8">
+        <a href="../articles.html" class="inline-flex items-center gap-2 text-[var(--brand)] hover:underline">← Back to All Articles</a>
+      </p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="container py-8 flex flex-col md:flex-row md:items-center md:justify-between text-sm gap-6">
+      <div>
+        <div class="text-xl font-serif">AXIA</div>
+        <p class="text-[var(--muted)] mt-2">Independent policy analysis and research.</p>
+      </div>
+      <nav class="flex flex-wrap gap-4">
+        <a class="hover:underline" href="../insights.html">Insights</a>
+        <a class="hover:underline" href="../foundations.html">Foundations</a>
+        <a class="hover:underline" href="../articles.html">All Articles</a>
+        <a class="hover:underline" href="../about.html">About</a>
+        <a class="hover:underline" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="border-t border-[var(--border)] text-xs text-center py-4 text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+
+  <script>
+    // Footer year (safe if #year doesn't exist)
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    (function () {
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    })();
+  </script>
+</body>
+</html>
