@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Beyond the Herd: Finding Wisdom Across the Aisle — Axia</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Favicon (prevents ? icon) -->
+  <link rel="icon" href="../images/favicon.png" type="image/png" />
+
+  <style>
+    :root{
+      --navy:#051c33;
+      --ink:#18181b;
+      --muted:#5b6275;
+      --border:#e5e7eb;
+      --brand:#1f4fbf;
+    }
+    html,body{ color:var(--ink); background:#fff; }
+    .container{ max-width:1120px; margin-inline:auto; padding-inline:1rem; }
+    .container-article{ max-width:960px; margin-inline:auto; padding-inline:1rem; }
+
+    .prose p, .prose ul, .prose ol{ line-height:1.75; }
+    .prose h2{ margin-top:2rem; font-weight:700; font-size:1.875rem; }
+    @media (min-width:768px){ .prose h2{ font-size:2.125rem; } }
+
+    .bullets{ list-style:disc; padding-left:1.5rem; }
+    .bullets li{ margin-bottom:.5rem; }
+  </style>
+</head>
+<body class="font-sans">
+
+<!-- Header (root page) -->
+<header class="sticky top-0 z-40 bg-[var(--navy)]">
+    <div class="container py-4 flex items-center gap-6">
+      <a id="logoLink" href="index.html" class="flex items-center">
+        <img id="logoImg" src="images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+        <span class="sr-only">AXIA</span>
+      </a>
+  
+      <!-- Desktop nav -->
+      <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
+        <a class="hover:underline" href="insights.html">Insights</a>
+        <a class="hover:underline" href="foundations.html">Foundations</a>
+        <a class="hover:underline underline-offset-4" href="articles.html">All Articles</a>
+        <a class="hover:underline" href="about.html">About</a>
+        <a class="hover:underline" href="contact.html">Contact</a>
+      </nav>
+  
+      <!-- Mobile toggle -->
+      <button id="navToggle" class="md:hidden text-white p-2 ml-auto" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+  
+      <!-- Desktop search (wrapped in relative for dropdown) -->
+      <div class="ml-auto hidden md:block relative" id="navSearchWrap">
+        <input id="navSearch" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" autocomplete="off" />
+        <!-- Dropdown -->
+        <div id="navSearchResults" class="absolute right-0 mt-1 w-[28rem] max-w-[90vw] bg-white border border-[var(--border)] rounded shadow-lg hidden z-50"></div>
+      </div>
+    </div>
+  
+    <!-- Mobile nav (vertical) -->
+    <div id="mobileMenu" class="hidden flex-col bg-[var(--navy)] text-white p-4 space-y-3 md:hidden">
+      <a href="insights.html">Insights</a>
+      <a href="foundations.html">Foundations</a>
+      <a href="articles.html">All Articles</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <!-- Mobile search + dropdown -->
+      <div class="relative">
+        <input id="mobileSearch" placeholder="Search…" class="w-full border rounded px-3 py-2 text-sm bg-white text-black" autocomplete="off" />
+        <div id="mobileSearchResults" class="absolute left-0 mt-1 w-full bg-white border border-[var(--border)] rounded shadow-lg hidden z-50"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Article -->
+  <main class="container-article py-8 md:py-12">
+    <div class="text-[12px] uppercase tracking-[.12em] text-[var(--muted)] mb-2">Insights</div>
+    <h1 class="font-serif text-3xl md:text-5xl leading-tight">Beyond the Herd: Finding Wisdom Across the Aisle</h1>
+    <div class="mt-3 text-sm text-[var(--muted)]">By Axia Staff • <time datetime="2025-08-24">Aug 2025</time></div>
+
+    <!-- Hero -->
+    <figure class="mt-6 md:mt-8">
+      <img src="../images/card-herd.jpg" alt="Illustration of people moving in a herd with a few thinking independently"
+           class="w-full aspect-[16/9] object-cover rounded border border-[var(--border)]" />
+    </figure>
+
+    <!-- Body -->
+    <article class="mt-8 prose max-w-none">
+
+      <p>Beyond the Herd: Finding Wisdom Across the Aisle</p>
+
+      <p>Have you watched the old <a href="https://www.instagram.com/reel/C_xU4XGRtIy/?igsh=MWxydXFjeXl3NGd3bg==" target="_blank" rel="noopener" class="text-[var(--brand)] underline">presidential debates</a>? In 1960, John F. Kennedy said, “I think Nixon is an effective leader of his party. The question is which party do we want to lead the United States.” Doesn’t this stir up such good feelings inside? Two parties, acknowledging each other’s legitimacy, debating not who was good or evil, but how best to lead toward a shared goal. </p>
+ 
+      <p>But at the same time, when we scroll past a reel or a headline, our blood begins to boil. Whether you lean Democrat or Republican, the political shorts that we see stir the emotions in us to pit ourselves against the “other side.” We want to see the other side demolished, yet we still get the warm fuzzy feelings when we watch the debates from the past. How are we to ameliorate these two feelings? I propose that we stop thinking like a herd, and begin to see nuances in what each party stands for. </p>
+
+      <h2>What are Political Parties?</h2>
+      <p>Political parties are not moral absolutes. They represent bundles of principles that groups of people believe will best sustain and support society. Over time, those bundles of values evolve, but each is rooted in legitimate concerns. To see politics more clearly, we need to step back and recognize the values each party protects. </p>
+
+      <h2>Democratic Party: Core Values</h2>
+      <ul class="bullets">
+        <li>Equity and Inclusion. A commitment to expanding rights and opportunities for marginalized groups </li>
+        <li>Government as a Tool for Fairness. A belief that public institutions should correct inequalities and provide support where markets fall short. </li>
+        <li>Collective Responsibility. An emphasis on shared challenges, like climate change, health care, and systemic injustice, that require collective solutions. </li>
+      </ul>
+
+      <h2>Republican Party: Core Values</h2>
+      <ul class="bullets">
+        <li>Individual Responsibility and Liberty. A conviction that individuals and families, not government, should be the primary drivers of success. </li>
+        <li>Limited Government. The idea that excessive government intervention often reduces freedom and creates inefficiency. </li>
+        <li>Tradition and Stability. Valuing continuity in culture, economics and institutions, with an eye to preserving what works. </li>
+      </ul>
+
+      <h2>Why Does This Matter?</h2>
+      <p>I hope we can all stop and take a moment to genuinely think about what the other side stands for. Both parties are trying to protect values worth defending. Democrats stress fairness; Republicans stress freedom. Neither of those is evil. In fact, most of us want both. If you lean Republican, isn’t it a great thing that some people want to support those who, through no fault of their own, are unable to work? If you lean Democrat, isn't it a great thing that people care about individual freedom, that if you work hard, then you can achieve anything, and not have it be taken away from you unfairly? 
+You don’t have to agree with everything, or even anything, someone believes. What matters is recognizing that they are a person, driven by values they see as just and right. When you humanize the other side instead of seeing them as an “enemy,” their arguments may start to make more sense. You can begin to empathize with their perspective. <strong>Most people are guided by good values. They’re simply trying to defend them, just like you</strong>.</p>
+
+      <h2>How to Avoid Herd Mentality</h2>
+      <p>Think of herd mentality as political autopilot: following your “team” without reflection. To resist it: </p>
+      <ul class="bullets">
+        <li>Pause before reacting. Ask, What value is this person trying to protect? </li>
+        <li>Evaluate ideas Individually. Support a policy because it works, not because your side proposed it. </li>
+        <li>Seek Overlap. Many issues, like infrastructure, justice reform, or protecting vulnerable groups, reflect values shared across parties. </li>
+        <li>Reject Us vs Them. Healthy democracy means sometimes “they” have good ideas too. </li>
+      </ul>
+
+      <h2>Bottom line</h2>
+      <p>Think back to the Nixon vs John F Kennedy Debate. Isn’t this what we want? How do we get back to this point? See that neither party is inherently evil. They are groups of people protecting different values that all matter: fairness, freedom, stability, and justice. By stepping outside the herd mentality, we can evaluate ideas on principle, not partisanship. That shift brings us closer to the spirit Kennedy expressed in 1960, two parties in disagreement, but united in the belief that America's future is worth arguing for, together.  </p>
+
+      <p class="mt-8">
+        <a href="../articles.html" class="inline-flex items-center gap-2 text-[var(--brand)] hover:underline">← Back to All Articles</a>
+      </p>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-[var(--border)] mt-12">
+    <div class="container py-8 flex flex-col md:flex-row md:items-center md:justify-between text-sm gap-6">
+      <div>
+        <div class="text-xl font-serif">AXIA</div>
+        <p class="text-[var(--muted)] mt-2">Independent policy analysis and research.</p>
+      </div>
+      <nav class="flex flex-wrap gap-4">
+        <a class="hover:underline" href="../insights.html">Insights</a>
+        <a class="hover:underline" href="../foundations.html">Foundations</a>
+        <a class="hover:underline" href="../articles.html">All Articles</a>
+        <a class="hover:underline" href="../about.html">About</a>
+        <a class="hover:underline" href="../contact.html">Contact</a>
+      </nav>
+    </div>
+    <div class="border-t border-[var(--border)] text-xs text-center py-4 text-[var(--muted)]">
+      © <span id="year"></span> Axia
+    </div>
+  </footer>
+
+  <script>
+    // Footer year (safe if #year doesn't exist)
+    const y = document.getElementById('year');
+    if (y) y.textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    (function () {
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (!toggle || !menu) return;
+      toggle.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+      });
+    })();
+  </script>
+
+<script>
+    (function () {
+      // Path safety for /articles/ pages
+      const inArticles = location.pathname.includes('/articles/');
+      const prefix = inArticles ? '../' : '';
+    
+      // Fix logo/link paths so header works everywhere
+      const logoLink = document.getElementById('logoLink');
+      if (logoLink) logoLink.setAttribute('href', prefix + 'index.html');
+      const logoImg = document.getElementById('logoImg');
+      if (logoImg && !logoImg.src.startsWith('http')) logoImg.src = prefix + 'images/logo.png';
+      document.querySelectorAll('header nav a, #mobileMenu a').forEach(a => {
+        const href = a.getAttribute('href');
+        if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('/')) return;
+        a.setAttribute('href', prefix + href);
+      });
+    
+      // Mobile nav toggle
+      const toggle = document.getElementById('navToggle');
+      const menu = document.getElementById('mobileMenu');
+      if (toggle && menu) {
+        toggle.addEventListener('click', () => {
+          const hidden = menu.classList.toggle('hidden');
+          toggle.setAttribute('aria-expanded', String(!hidden));
+        });
+      }
+    
+      // --------- SITE ARTICLE INDEX (extend as you add pages) ----------
+      // Title, url (relative to site root), tags, desc for matching
+      const ARTICLES = [
+        {
+          title: "Inflation: A Double-Edged Sword?",
+          url: "articles/should-we-hate-inflation.html",
+          tags: "inflation cpi prices foundations",
+          desc: "What inflation is, how it’s measured, pros and cons"
+        },
+        {
+          title: "The Federal Reserve and Interest Rates",
+          url: "articles/federal-reserve-interest-rates.html",
+          tags: "fed interest rates foundations monetary policy",
+          desc: "What the Fed is, how rates work, why it matters"
+        },
+        {
+          title: "Should the U.S. give more to Ukraine?",
+          url: "articles/should-us-give-more-aid-to-ukraine.html",
+          tags: "ukraine foreign policy security insights",
+          desc: "Strategic, economic, and political trade-offs"
+        },
+        {
+          title: "Lisa Cook, Trump, and the Battle Over Fed Interest Rates",
+          url: "articles/lisa-cooked.html",
+          tags: "fed governance insights monetary policy",
+          desc: "Personnel pressure meets monetary policy"
+        },
+        {
+          title: "The U.S. National Debt: What It Means and Why It Matters",
+          url: "articles/us-national-debt.html",
+          tags: "debt finance economy foundations",
+          desc: "America’s $37T debt, why it matters, trade-offs"
+        },
+        {
+          title: "Asset Bubbles: What They Are and Why They Matter",
+          url: "articles/asset-bubbles.html",
+          tags: "markets bubbles finance foundations",
+          desc: "Bubbles, why they form, and how they affect you"
+        },
+        {
+          title: "Recession Fundamentals: What They Are and Why They Matter",
+          url: "articles/recession-fundamentals.html",
+          tags: "recession economy jobs foundations",
+          desc: "Causes, impacts, government response, and signs"
+        },
+        {
+          title: "Beyond the Herd: Finding Wisdom Across the Aisle",
+          url: "articles/no-more-herd.html",
+          tags: "politics governance culture insights",
+          desc: "Seeing values across parties and avoiding herd mentality"
+        },
+        {
+          title: "Why Your Vote Matters",
+          url: "articles/why-your-vote-matters.html",
+          tags: "voting civic participation governance insights",
+          desc: "Thin margins, real policy stakes—show up"
+        }
+      ];
+    
+      // Render dropdown results
+      function renderResults(container, items) {
+        if (!container) return;
+        if (!items.length) {
+          container.innerHTML = '<div class="px-3 py-2 text-sm text-[var(--muted)]">No matches</div>';
+          container.classList.remove('hidden');
+          return;
+        }
+        container.innerHTML = items.map((it, idx) => `
+          <a href="${prefix + it.url}" data-idx="${idx}"
+             class="block px-3 py-2 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none">
+            <div class="text-sm font-medium">${it.title}</div>
+            <div class="text-xs text-[var(--muted)]">${it.desc}</div>
+          </a>
+        `).join('');
+        container.classList.remove('hidden');
+      }
+    
+      function closeResults(container) {
+        if (container) container.classList.add('hidden');
+      }
+    
+      // Filter logic (title + tags + desc)
+      function filterArticles(q) {
+        if (!q) return [];
+        const s = q.toLowerCase();
+        return ARTICLES.filter(a => (
+          (a.title || '').toLowerCase().includes(s) ||
+          (a.tags || '').toLowerCase().includes(s) ||
+          (a.desc || '').toLowerCase().includes(s)
+        )).slice(0, 8); // cap results
+      }
+    
+      // Wire up an input + dropdown pair
+      function attachAutocomplete(inputId, dropdownId) {
+        const input = document.getElementById(inputId);
+        const dropdown = document.getElementById(dropdownId);
+        if (!input || !dropdown) return;
+    
+        let blurTimeout = null;
+    
+        input.addEventListener('input', () => {
+          const q = input.value.trim();
+          if (!q) return closeResults(dropdown);
+          const items = filterArticles(q);
+          renderResults(dropdown, items);
+        });
+    
+        // Keyboard navigation: Enter opens first result
+        input.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            closeResults(dropdown);
+          } else if (e.key === 'Enter') {
+            const first = dropdown.querySelector('a');
+            if (first) {
+              e.preventDefault();
+              location.href = first.getAttribute('href');
+            }
+          }
+        });
+    
+        // Hide on outside click / blur (with small delay so clicks register)
+        input.addEventListener('blur', () => {
+          blurTimeout = setTimeout(() => closeResults(dropdown), 120);
+        });
+        input.addEventListener('focus', () => {
+          if (blurTimeout) clearTimeout(blurTimeout);
+          // Re-show if there's a query already
+          if (input.value.trim()) {
+            const items = filterArticles(input.value.trim());
+            renderResults(dropdown, items);
+          }
+        });
+    
+        // Keep open for clicks inside the dropdown
+        dropdown.addEventListener('mousedown', (e) => {
+          if (blurTimeout) clearTimeout(blurTimeout);
+        });
+      }
+    
+      // Attach to desktop + mobile inputs
+      attachAutocomplete('navSearch', 'navSearchResults');
+      attachAutocomplete('mobileSearch', 'mobileSearchResults');
+    })();
+    </script>
+</body>
+</html>
