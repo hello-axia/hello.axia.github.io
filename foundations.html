@@ -25,46 +25,50 @@
 <!-- Give the page a top anchor so #top works -->
 <body id="top" class="font-sans">
 
-<!-- Header (desktop unchanged, mobile-friendly) -->
+<!-- Header (root page) -->
 <header class="sticky top-0 z-40 bg-[var(--navy)]">
   <div class="container py-4 flex items-center gap-6">
-    <a href="index.html" class="flex items-center">
-      <img src="images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
+    <a id="logoLink" href="index.html" class="flex items-center">
+      <img id="logoImg" src="images/logo.png" alt="AXIA" class="h-10 w-auto md:h-12" />
       <span class="sr-only">AXIA</span>
     </a>
 
+    <!-- Desktop nav -->
     <nav class="hidden md:flex items-center gap-6 text-sm ml-6 text-white">
       <a class="hover:underline" href="insights.html">Insights</a>
-      <a class="underline underline-offset-4" href="foundations.html">Foundations</a>
-      <a class="hover:underline" href="articles.html">All Articles</a>
+      <a class="hover:underline" href="foundations.html">Foundations</a>
+      <a class="hover:underline underline-offset-4" href="articles.html">All Articles</a>
       <a class="hover:underline" href="about.html">About</a>
       <a class="hover:underline" href="contact.html">Contact</a>
     </nav>
 
-    <!-- Mobile hamburger (only shows on small screens) -->
-    <button id="navToggle" type="button" class="md:hidden text-white p-2 ml-auto" aria-label="Toggle navigation">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
-           viewBox="0 0 24 24" stroke="currentColor">
+    <!-- Mobile toggle -->
+    <button id="navToggle" class="md:hidden text-white p-2 ml-auto" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
               d="M4 6h16M4 12h16M4 18h16"/>
       </svg>
     </button>
 
-    <!-- Desktop search (unchanged) -->
-    <div class="ml-auto hidden md:block">
-      <input id="search" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" />
+    <!-- Desktop search (wrapped in relative for dropdown) -->
+    <div class="ml-auto hidden md:block relative" id="navSearchWrap">
+      <input id="navSearch" placeholder="Search…" class="w-64 border rounded px-3 py-2 text-sm" autocomplete="off" />
+      <!-- Dropdown -->
+      <div id="navSearchResults" class="absolute right-0 mt-1 w-[28rem] max-w-[90vw] bg-white border border-[var(--border)] rounded shadow-lg hidden z-50"></div>
     </div>
   </div>
 
-  <!-- Mobile dropdown menu (hidden by default) -->
-  <div id="mobileMenu" class="hidden md:hidden bg-[var(--navy)] text-white">
-    <div class="container py-3 flex flex-col gap-3">
-      <a href="insights.html">Insights</a>
-      <a href="foundations.html">Foundations</a>
-      <a href="articles.html">All Articles</a>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <input placeholder="Search…" class="w-full border rounded px-3 py-2 text-sm bg-white text-black" />
+  <!-- Mobile nav (vertical) -->
+  <div id="mobileMenu" class="hidden flex-col bg-[var(--navy)] text-white p-4 space-y-3 md:hidden">
+    <a href="insights.html">Insights</a>
+    <a href="foundations.html">Foundations</a>
+    <a href="articles.html">All Articles</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <!-- Mobile search + dropdown -->
+    <div class="relative">
+      <input id="mobileSearch" placeholder="Search…" class="w-full border rounded px-3 py-2 text-sm bg-white text-black" autocomplete="off" />
+      <div id="mobileSearchResults" class="absolute left-0 mt-1 w-full bg-white border border-[var(--border)] rounded shadow-lg hidden z-50"></div>
     </div>
   </div>
 </header>
@@ -315,21 +319,24 @@
       </p>
 
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
-          <a href="articles/example-article.html">
-            <img src="images/card2.jpg" alt="" class="w-full h-40 object-cover">
-          </a>
-          <div class="p-4">
-            <a class="font-semibold leading-snug hover:underline"
-               href="articles/example-article.html">
-              Equality, equity, and efficiency
-            </a>
-            <p class="text-sm text-[var(--muted)] mt-2">
-              When goals align, when they clash, and how to think about trade-offs.
-            </p>
-            <div class="text-xs text-[var(--muted)] mt-3">By Staff · Aug 2025</div>
-          </div>
-        </article>
+        <article class="border border-[var(--border)] rounded overflow-hidden bg-white"
+         data-title="beyond the herd"
+         data-tags="politics,governance,insights"
+         data-desc="avoiding herd mentality empathy bipartisan values">
+  <a href="articles/no-more-herd.html">
+    <img src="images/card-herd.jpg" alt="Beyond the Herd" class="w-full h-40 object-cover">
+  </a>
+  <div class="p-4">
+    <a class="font-semibold leading-snug hover:underline"
+       href="articles/no-more-herd.html">
+      Beyond the Herd: Finding Wisdom Across the Aisle
+    </a>
+    <p class="text-sm text-[var(--muted)] mt-2">
+      Exploring bipartisan values, herd mentality, and how to see the other side with empathy.
+    </p>
+    <div class="text-xs text-[var(--muted)] mt-3">By Axia Staff · Aug 2025</div>
+  </div>
+</article>
 
         <article class="border border-[var(--border)] rounded overflow-hidden bg-white">
           <a href="articles/example-article.html">
@@ -421,5 +428,177 @@
     });
   })();
 </script>
+
+<script>
+  (function () {
+    // Path safety for /articles/ pages
+    const inArticles = location.pathname.includes('/articles/');
+    const prefix = inArticles ? '../' : '';
+  
+    // Fix logo/link paths so header works everywhere
+    const logoLink = document.getElementById('logoLink');
+    if (logoLink) logoLink.setAttribute('href', prefix + 'index.html');
+    const logoImg = document.getElementById('logoImg');
+    if (logoImg && !logoImg.src.startsWith('http')) logoImg.src = prefix + 'images/logo.png';
+    document.querySelectorAll('header nav a, #mobileMenu a').forEach(a => {
+      const href = a.getAttribute('href');
+      if (!href || href.startsWith('http') || href.startsWith('#') || href.startsWith('/')) return;
+      a.setAttribute('href', prefix + href);
+    });
+  
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const menu = document.getElementById('mobileMenu');
+    if (toggle && menu) {
+      toggle.addEventListener('click', () => {
+        const hidden = menu.classList.toggle('hidden');
+        toggle.setAttribute('aria-expanded', String(!hidden));
+      });
+    }
+  
+    // --------- SITE ARTICLE INDEX (extend as you add pages) ----------
+    // Title, url (relative to site root), tags, desc for matching
+    const ARTICLES = [
+      {
+        title: "Inflation: A Double-Edged Sword?",
+        url: "articles/should-we-hate-inflation.html",
+        tags: "inflation cpi prices foundations",
+        desc: "What inflation is, how it’s measured, pros and cons"
+      },
+      {
+        title: "The Federal Reserve and Interest Rates",
+        url: "articles/federal-reserve-interest-rates.html",
+        tags: "fed interest rates foundations monetary policy",
+        desc: "What the Fed is, how rates work, why it matters"
+      },
+      {
+        title: "Should the U.S. give more to Ukraine?",
+        url: "articles/should-us-give-more-aid-to-ukraine.html",
+        tags: "ukraine foreign policy security insights",
+        desc: "Strategic, economic, and political trade-offs"
+      },
+      {
+        title: "Lisa Cook, Trump, and the Battle Over Fed Interest Rates",
+        url: "articles/lisa-cooked.html",
+        tags: "fed governance insights monetary policy",
+        desc: "Personnel pressure meets monetary policy"
+      },
+      {
+        title: "The U.S. National Debt: What It Means and Why It Matters",
+        url: "articles/us-national-debt.html",
+        tags: "debt finance economy foundations",
+        desc: "America’s $37T debt, why it matters, trade-offs"
+      },
+      {
+        title: "Asset Bubbles: What They Are and Why They Matter",
+        url: "articles/asset-bubbles.html",
+        tags: "markets bubbles finance foundations",
+        desc: "Bubbles, why they form, and how they affect you"
+      },
+      {
+        title: "Recession Fundamentals: What They Are and Why They Matter",
+        url: "articles/recession-fundamentals.html",
+        tags: "recession economy jobs foundations",
+        desc: "Causes, impacts, government response, and signs"
+      },
+      {
+        title: "Beyond the Herd: Finding Wisdom Across the Aisle",
+        url: "articles/no-more-herd.html",
+        tags: "politics governance culture insights",
+        desc: "Seeing values across parties and avoiding herd mentality"
+      },
+      {
+        title: "Why Your Vote Matters",
+        url: "articles/why-your-vote-matters.html",
+        tags: "voting civic participation governance insights",
+        desc: "Thin margins, real policy stakes—show up"
+      }
+    ];
+  
+    // Render dropdown results
+    function renderResults(container, items) {
+      if (!container) return;
+      if (!items.length) {
+        container.innerHTML = '<div class="px-3 py-2 text-sm text-[var(--muted)]">No matches</div>';
+        container.classList.remove('hidden');
+        return;
+      }
+      container.innerHTML = items.map((it, idx) => `
+        <a href="${prefix + it.url}" data-idx="${idx}"
+           class="block px-3 py-2 hover:bg-gray-50 focus:bg-gray-50 focus:outline-none">
+          <div class="text-sm font-medium">${it.title}</div>
+          <div class="text-xs text-[var(--muted)]">${it.desc}</div>
+        </a>
+      `).join('');
+      container.classList.remove('hidden');
+    }
+  
+    function closeResults(container) {
+      if (container) container.classList.add('hidden');
+    }
+  
+    // Filter logic (title + tags + desc)
+    function filterArticles(q) {
+      if (!q) return [];
+      const s = q.toLowerCase();
+      return ARTICLES.filter(a => (
+        (a.title || '').toLowerCase().includes(s) ||
+        (a.tags || '').toLowerCase().includes(s) ||
+        (a.desc || '').toLowerCase().includes(s)
+      )).slice(0, 8); // cap results
+    }
+  
+    // Wire up an input + dropdown pair
+    function attachAutocomplete(inputId, dropdownId) {
+      const input = document.getElementById(inputId);
+      const dropdown = document.getElementById(dropdownId);
+      if (!input || !dropdown) return;
+  
+      let blurTimeout = null;
+  
+      input.addEventListener('input', () => {
+        const q = input.value.trim();
+        if (!q) return closeResults(dropdown);
+        const items = filterArticles(q);
+        renderResults(dropdown, items);
+      });
+  
+      // Keyboard navigation: Enter opens first result
+      input.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          closeResults(dropdown);
+        } else if (e.key === 'Enter') {
+          const first = dropdown.querySelector('a');
+          if (first) {
+            e.preventDefault();
+            location.href = first.getAttribute('href');
+          }
+        }
+      });
+  
+      // Hide on outside click / blur (with small delay so clicks register)
+      input.addEventListener('blur', () => {
+        blurTimeout = setTimeout(() => closeResults(dropdown), 120);
+      });
+      input.addEventListener('focus', () => {
+        if (blurTimeout) clearTimeout(blurTimeout);
+        // Re-show if there's a query already
+        if (input.value.trim()) {
+          const items = filterArticles(input.value.trim());
+          renderResults(dropdown, items);
+        }
+      });
+  
+      // Keep open for clicks inside the dropdown
+      dropdown.addEventListener('mousedown', (e) => {
+        if (blurTimeout) clearTimeout(blurTimeout);
+      });
+    }
+  
+    // Attach to desktop + mobile inputs
+    attachAutocomplete('navSearch', 'navSearchResults');
+    attachAutocomplete('mobileSearch', 'mobileSearchResults');
+  })();
+  </script>
 </body>
 </html>
